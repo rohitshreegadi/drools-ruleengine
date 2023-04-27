@@ -1,0 +1,1191 @@
+[
+	
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047658904&type=sessionStart&data%5Bcontext%5D%5BapiVersion%5D=1.0&data%5Bcontext%5D%5BaccessMode%5D=limited&data%5Bcontext%5D%5BfriendlyToTop%5D=false&data%5Bcontext%5D%5Benvironment%5D=app&data%5Bcontext%5D%5BomidJsInfo%5D%5BomidImplementer%5D=omsdk&data%5Bcontext%5D%5BomidJsInfo%5D%5BserviceVersion%5D=1.4.2-iab3703&data%5Bcontext%5D%5BomidNativeInfo%5D%5BpartnerName%5D=Adsbynimbus&data%5Bcontext%5D%5BomidNativeInfo%5D%5BpartnerVersion%5D=2.1.2&data%5Bcontext%5D%5Bapp%5D%5BappId%5D=com.adsbynimbus.ios.NimbusDemo&data%5Bcontext%5D%5Bapp%5D%5BlibraryVersion%5D=1.4.2-Adsbynimbus&data%5Bcontext%5D%5Bsupports%5D%5B0%5D=clid&data%5Bcontext%5D%5Bsupports%5D%5B1%5D=vlid&data%5Bcontext%5D%5BdeviceCategory%5D=mobile&data%5Bcontext%5D%5BadSessionType%5D=native&data%5Bcontext%5D%5BdeviceInfo%5D%5BdeviceType%5D=iPhone12%2C1&data%5Bcontext%5D%5BdeviceInfo%5D%5Bos%5D=iOS&data%5Bcontext%5D%5BdeviceInfo%5D%5BosVersion%5D=16.0&data%5Bcontext%5D%5BcanMeasureVisibility%5D=true&data%5BimpressionType%5D=onePixel&data%5BmediaType%5D=display&data%5BcreativeType%5D=nativeDisplay&data%5BlastActivity%5D%5Btimestamp%5D=1669047619436&data%5BsupportsLoadedEvent%5D=true&data%5BpageUrl%5D=www.domain.com&data%5BcontentUrl%5D=null&data%5BverificationParameters%5D=iabtechlab-Adsbynimbus&rawJSON=%7B%22adSessionId%22%3A%22B9F5ACC3-0C15-4147-B137-3AB3C296CE61%22%2C%22timestamp%22%3A1669047658904%2C%22type%22%3A%22sessionStart%22%2C%22data%22%3A%7B%22context%22%3A%7B%22apiVersion%22%3A%221.0%22%2C%22accessMode%22%3A%22limited%22%2C%22environment%22%3A%22app%22%2C%22omidJsInfo%22%3A%7B%22omidImplementer%22%3A%22omsdk%22%2C%22serviceVersion%22%3A%221.4.2-iab3703%22%7D%2C%22omidNativeInfo%22%3A%7B%22partnerName%22%3A%22Adsbynimbus%22%2C%22partnerVersion%22%3A%222.1.2%22%7D%2C%22app%22%3A%7B%22appId%22%3A%22com.adsbynimbus.ios.NimbusDemo%22%2C%22libraryVersion%22%3A%221.4.2-Adsbynimbus%22%7D%2C%22supports%22%3A%5B%22clid%22%2C%22vlid%22%5D%2C%22deviceCategory%22%3A%22mobile%22%2C%22adSessionType%22%3A%22native%22%2C%22deviceInfo%22%3A%7B%22deviceType%22%3A%22iPhone12%2C1%22%2C%22os%22%3A%22iOS%22%2C%22osVersion%22%3A%2216.0%22%7D%2C%22canMeasureVisibility%22%3Atrue%7D%2C%22impressionType%22%3A%22onePixel%22%2C%22mediaType%22%3A%22display%22%2C%22creativeType%22%3A%22nativeDisplay%22%2C%22lastActivity%22%3A%7B%22timestamp%22%3A1669047619436%7D%2C%22supportsLoadedEvent%22%3Atrue%2C%22pageUrl%22%3A%22www.domain.com%22%2C%22contentUrl%22%3Anull%2C%22verificationParameters%22%3A%22iabtechlab-Adsbynimbus%22%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:50:59.727+05:30",
+			"requestBegin": "2022-11-21T21:50:59.729+05:30",
+			"requestComplete": "2022-11-21T21:50:59.729+05:30",
+			"responseBegin": "2022-11-21T21:51:00.286+05:30",
+			"end": "2022-11-21T21:51:00.287+05:30"
+		},
+		"durations": {
+			"total": 558,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 0,
+			"response": 1,
+			"latency": 557
+		},
+		"speeds": {
+			"overall": 3838,
+			"request": 0,
+			"response": 156000
+		},
+		"totalSize": 2142,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 1986,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047658904&type=sessionStart&data%5Bcontext%5D%5BapiVersion%5D=1.0&data%5Bcontext%5D%5BaccessMode%5D=limited&data%5Bcontext%5D%5BfriendlyToTop%5D=false&data%5Bcontext%5D%5Benvironment%5D=app&data%5Bcontext%5D%5BomidJsInfo%5D%5BomidImplementer%5D=omsdk&data%5Bcontext%5D%5BomidJsInfo%5D%5BserviceVersion%5D=1.4.2-iab3703&data%5Bcontext%5D%5BomidNativeInfo%5D%5BpartnerName%5D=Adsbynimbus&data%5Bcontext%5D%5BomidNativeInfo%5D%5BpartnerVersion%5D=2.1.2&data%5Bcontext%5D%5Bapp%5D%5BappId%5D=com.adsbynimbus.ios.NimbusDemo&data%5Bcontext%5D%5Bapp%5D%5BlibraryVersion%5D=1.4.2-Adsbynimbus&data%5Bcontext%5D%5Bsupports%5D%5B0%5D=clid&data%5Bcontext%5D%5Bsupports%5D%5B1%5D=vlid&data%5Bcontext%5D%5BdeviceCategory%5D=mobile&data%5Bcontext%5D%5BadSessionType%5D=native&data%5Bcontext%5D%5BdeviceInfo%5D%5BdeviceType%5D=iPhone12%2C1&data%5Bcontext%5D%5BdeviceInfo%5D%5Bos%5D=iOS&data%5Bcontext%5D%5BdeviceInfo%5D%5BosVersion%5D=16.0&data%5Bcontext%5D%5BcanMeasureVisibility%5D=true&data%5BimpressionType%5D=onePixel&data%5BmediaType%5D=display&data%5BcreativeType%5D=nativeDisplay&data%5BlastActivity%5D%5Btimestamp%5D=1669047619436&data%5BsupportsLoadedEvent%5D=true&data%5BpageUrl%5D=null&data%5BcontentUrl%5D=null&data%5BverificationParameters%5D=iabtechlab-Adsbynimbus&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047658904%2C%22type%22%3A%22sessionStart%22%2C%22data%22%3A%7B%22context%22%3A%7B%22apiVersion%22%3A%221.0%22%2C%22accessMode%22%3A%22limited%22%2C%22environment%22%3A%22app%22%2C%22omidJsInfo%22%3A%7B%22omidImplementer%22%3A%22omsdk%22%2C%22serviceVersion%22%3A%221.4.2-iab3703%22%7D%2C%22omidNativeInfo%22%3A%7B%22partnerName%22%3A%22Adsbynimbus%22%2C%22partnerVersion%22%3A%222.1.2%22%7D%2C%22app%22%3A%7B%22appId%22%3A%22com.adsbynimbus.ios.NimbusDemo%22%2C%22libraryVersion%22%3A%221.4.2-Adsbynimbus%22%7D%2C%22supports%22%3A%5B%22clid%22%2C%22vlid%22%5D%2C%22deviceCategory%22%3A%22mobile%22%2C%22adSessionType%22%3A%22native%22%2C%22deviceInfo%22%3A%7B%22deviceType%22%3A%22iPhone12%2C1%22%2C%22os%22%3A%22iOS%22%2C%22osVersion%22%3A%2216.0%22%7D%2C%22canMeasureVisibility%22%3Atrue%7D%2C%22impressionType%22%3A%22onePixel%22%2C%22mediaType%22%3A%22display%22%2C%22creativeType%22%3A%22nativeDisplay%22%2C%22lastActivity%22%3A%7B%22timestamp%22%3A1669047619436%7D%2C%22supportsLoadedEvent%22%3Atrue%2C%22pageUrl%22%3Anull%2C%22contentUrl%22%3Anull%2C%22verificationParameters%22%3A%22iabtechlab-Adsbynimbus%22%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:00 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047658903&type=loaded&data%5BimpressionType%5D=onePixel&data%5BmediaType%5D=display&data%5BcreativeType%5D=nativeDisplay&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047658903%2C%22type%22%3A%22loaded%22%2C%22data%22%3A%7B%22impressionType%22%3A%22onePixel%22%2C%22mediaType%22%3A%22display%22%2C%22creativeType%22%3A%22nativeDisplay%22%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:50:59.727+05:30",
+			"requestBegin": "2022-11-21T21:50:59.729+05:30",
+			"requestComplete": "2022-11-21T21:50:59.729+05:30",
+			"responseBegin": "2022-11-21T21:51:00.164+05:30",
+			"end": "2022-11-21T21:51:00.164+05:30"
+		},
+		"durations": {
+			"total": 435,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 0,
+			"response": 0,
+			"latency": 435
+		},
+		"speeds": {
+			"overall": 1239,
+			"request": 0,
+			"response": 0
+		},
+		"totalSize": 539,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 383,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047658903&type=loaded&data%5BimpressionType%5D=onePixel&data%5BmediaType%5D=display&data%5BcreativeType%5D=nativeDisplay&rawJSON=%7B%22adSessionId%22%3A%22B9F5ACC3-0C15-4147-B137-3AB3C296CE61%22%2C%22timestamp%22%3A1669047658903%2C%22type%22%3A%22loaded%22%2C%22data%22%3A%7B%22impressionType%22%3A%22onePixel%22%2C%22mediaType%22%3A%22display%22%2C%22creativeType%22%3A%22nativeDisplay%22%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:00 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047658913&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=100&data%5BadView%5D%5BpixelsInView%5D=285660&data%5BadView%5D%5Breasons%5D=%5B%5D&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047658913%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A100%2C%22pixelsInView%22%3A285660%2C%22reasons%22%3A%5B%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:50:59.727+05:30",
+			"requestBegin": "2022-11-21T21:50:59.729+05:30",
+			"requestComplete": "2022-11-21T21:50:59.729+05:30",
+			"responseBegin": "2022-11-21T21:51:00.164+05:30",
+			"end": "2022-11-21T21:51:00.164+05:30"
+		},
+		"durations": {
+			"total": 435,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 0,
+			"response": 0,
+			"latency": 435
+		},
+		"speeds": {
+			"overall": 3232,
+			"request": 0,
+			"response": 0
+		},
+		"totalSize": 1406,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 1250,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047658913&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=100&data%5BadView%5D%5BpixelsInView%5D=285660&data%5BadView%5D%5Breasons%5D=%5B%5D&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22B9F5ACC3-0C15-4147-B137-3AB3C296CE61%22%2C%22timestamp%22%3A1669047658913%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A100%2C%22pixelsInView%22%3A285660%2C%22reasons%22%3A%5B%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:00 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047658962&type=impression&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=100&data%5BadView%5D%5BpixelsInView%5D=285660&data%5BadView%5D%5Breasons%5D=%5B%5D&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&data%5BimpressionType%5D=onePixel&data%5BmediaType%5D=display&data%5BcreativeType%5D=nativeDisplay&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047658962%2C%22type%22%3A%22impression%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A100%2C%22pixelsInView%22%3A285660%2C%22reasons%22%3A%5B%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%2C%22impressionType%22%3A%22onePixel%22%2C%22mediaType%22%3A%22display%22%2C%22creativeType%22%3A%22nativeDisplay%22%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:50:59.750+05:30",
+			"requestBegin": "2022-11-21T21:50:59.751+05:30",
+			"requestComplete": "2022-11-21T21:50:59.751+05:30",
+			"responseBegin": "2022-11-21T21:51:00.180+05:30",
+			"end": "2022-11-21T21:51:00.180+05:30"
+		},
+		"durations": {
+			"total": 429,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 0,
+			"response": 0,
+			"latency": 429
+		},
+		"speeds": {
+			"overall": 3867,
+			"request": 0,
+			"response": 0
+		},
+		"totalSize": 1659,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 1503,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047658962&type=impression&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=100&data%5BadView%5D%5BpixelsInView%5D=285660&data%5BadView%5D%5Breasons%5D=%5B%5D&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&data%5BimpressionType%5D=onePixel&data%5BmediaType%5D=display&data%5BcreativeType%5D=nativeDisplay&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047658962%2C%22type%22%3A%22impression%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A100%2C%22pixelsInView%22%3A285660%2C%22reasons%22%3A%5B%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%2C%22impressionType%22%3A%22onePixel%22%2C%22mediaType%22%3A%22display%22%2C%22creativeType%22%3A%22nativeDisplay%22%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:00 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047661676&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=0&data%5BadView%5D%5BpixelsInView%5D=0&data%5BadView%5D%5Breasons%5D%5B0%5D=backgrounded&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047661676%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A0%2C%22pixelsInView%22%3A0%2C%22reasons%22%3A%5B%22backgrounded%22%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:51:02.479+05:30",
+			"requestBegin": "2022-11-21T21:51:02.495+05:30",
+			"requestComplete": "2022-11-21T21:51:02.497+05:30",
+			"responseBegin": "2022-11-21T21:51:02.925+05:30",
+			"end": "2022-11-21T21:51:02.926+05:30"
+		},
+		"durations": {
+			"total": 431,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 2,
+			"response": 1,
+			"latency": 428
+		},
+		"speeds": {
+			"overall": 3290,
+			"request": 631000,
+			"response": 156000
+		},
+		"totalSize": 1418,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 1262,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047661676&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=0&data%5BadView%5D%5BpixelsInView%5D=0&data%5BadView%5D%5Breasons%5D%5B0%5D=backgrounded&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22B9F5ACC3-0C15-4147-B137-3AB3C296CE61%22%2C%22timestamp%22%3A1669047661676%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A0%2C%22pixelsInView%22%3A0%2C%22reasons%22%3A%5B%22backgrounded%22%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:02 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047662685&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=100&data%5BadView%5D%5BpixelsInView%5D=285660&data%5BadView%5D%5Breasons%5D=%5B%5D&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22B9F5ACC3-0C15-4147-B137-3AB3C296CE61%22%2C%22timestamp%22%3A1669047662685%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A100%2C%22pixelsInView%22%3A285660%2C%22reasons%22%3A%5B%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:51:03.483+05:30",
+			"requestBegin": "2022-11-21T21:51:03.490+05:30",
+			"requestComplete": "2022-11-21T21:51:03.490+05:30",
+			"responseBegin": "2022-11-21T21:51:03.918+05:30",
+			"end": "2022-11-21T21:51:03.924+05:30"
+		},
+		"durations": {
+			"total": 434,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 0,
+			"response": 6,
+			"latency": 428
+		},
+		"speeds": {
+			"overall": 3239,
+			"request": 0,
+			"response": 26000
+		},
+		"totalSize": 1406,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 1250,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=B9F5ACC3-0C15-4147-B137-3AB3C296CE61&timestamp=1669047662685&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=100&data%5BadView%5D%5BpixelsInView%5D=285660&data%5BadView%5D%5Breasons%5D=%5B%5D&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=0&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D=%5B%5D&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047662685%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A100%2C%22pixelsInView%22%3A285660%2C%22reasons%22%3A%5B%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A285660%2C%22obstructions%22%3A%5B%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:03 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047663292&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=0&data%5BadView%5D%5BpixelsInView%5D=0&data%5BadView%5D%5Breasons%5D%5B0%5D=clipped&data%5BadView%5D%5Breasons%5D%5B1%5D=obstructed&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=-103.5&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=310.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bheight%5D=896&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5By%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5Bheight%5D=83&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5By%5D=813&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5Bheight%5D=0.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5By%5D=812.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5Bheight%5D=49&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5By%5D=813&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047663292%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A0%2C%22pixelsInView%22%3A0%2C%22reasons%22%3A%5B%22clipped%22%2C%22obstructed%22%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A-103.5%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A310.5%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A0%2C%22obstructions%22%3A%5B%7B%22width%22%3A414%2C%22height%22%3A896%2C%22x%22%3A0%2C%22y%22%3A0%7D%2C%7B%22width%22%3A414%2C%22height%22%3A83%2C%22x%22%3A0%2C%22y%22%3A813%7D%2C%7B%22width%22%3A414%2C%22height%22%3A0.5%2C%22x%22%3A0%2C%22y%22%3A812.5%7D%2C%7B%22width%22%3A414%2C%22height%22%3A49%2C%22x%22%3A0%2C%22y%22%3A813%7D%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:51:04.082+05:30",
+			"requestBegin": "2022-11-21T21:51:04.088+05:30",
+			"requestComplete": "2022-11-21T21:51:04.089+05:30",
+			"responseBegin": "2022-11-21T21:51:04.522+05:30",
+			"end": "2022-11-21T21:51:04.522+05:30"
+		},
+		"durations": {
+			"total": 434,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 1,
+			"response": 0,
+			"latency": 433
+		},
+		"speeds": {
+			"overall": 6087,
+			"request": 2486000,
+			"response": 0
+		},
+		"totalSize": 2642,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 2486,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047663292&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=0&data%5BadView%5D%5BpixelsInView%5D=0&data%5BadView%5D%5Breasons%5D%5B0%5D=clipped&data%5BadView%5D%5Breasons%5D%5B1%5D=obstructed&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=-103.5&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=310.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bheight%5D=896&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5By%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5Bheight%5D=83&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B1%5D%5By%5D=813&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5Bheight%5D=0.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B2%5D%5By%5D=812.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5Bheight%5D=49&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B3%5D%5By%5D=813&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047663292%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A0%2C%22pixelsInView%22%3A0%2C%22reasons%22%3A%5B%22clipped%22%2C%22obstructed%22%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A-103.5%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A310.5%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A0%2C%22obstructions%22%3A%5B%7B%22width%22%3A414%2C%22height%22%3A896%2C%22x%22%3A0%2C%22y%22%3A0%7D%2C%7B%22width%22%3A414%2C%22height%22%3A83%2C%22x%22%3A0%2C%22y%22%3A813%7D%2C%7B%22width%22%3A414%2C%22height%22%3A0.5%2C%22x%22%3A0%2C%22y%22%3A812.5%7D%2C%7B%22width%22%3A414%2C%22height%22%3A49%2C%22x%22%3A0%2C%22y%22%3A813%7D%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:04 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047663491&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=0&data%5BadView%5D%5BpixelsInView%5D=0&data%5BadView%5D%5Breasons%5D%5B0%5D=clipped&data%5BadView%5D%5Breasons%5D%5B1%5D=obstructed&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=-103.5&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=310.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bheight%5D=896&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5By%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047663491%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A0%2C%22pixelsInView%22%3A0%2C%22reasons%22%3A%5B%22clipped%22%2C%22obstructed%22%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A-103.5%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A310.5%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A0%2C%22obstructions%22%3A%5B%7B%22width%22%3A414%2C%22height%22%3A896%2C%22x%22%3A0%2C%22y%22%3A0%7D%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:51:04.282+05:30",
+			"requestBegin": "2022-11-21T21:51:04.282+05:30",
+			"requestComplete": "2022-11-21T21:51:04.283+05:30",
+			"responseBegin": "2022-11-21T21:51:04.710+05:30",
+			"end": "2022-11-21T21:51:04.710+05:30"
+		},
+		"durations": {
+			"total": 428,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 1,
+			"response": 0,
+			"latency": 427
+		},
+		"speeds": {
+			"overall": 3950,
+			"request": 1535000,
+			"response": 0
+		},
+		"totalSize": 1691,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 1535,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047663491&type=geometryChange&data%5Bviewport%5D%5Bwidth%5D=414&data%5Bviewport%5D%5Bheight%5D=896&data%5BadView%5D%5BpercentageInView%5D=0&data%5BadView%5D%5BpixelsInView%5D=0&data%5BadView%5D%5Breasons%5D%5B0%5D=clipped&data%5BadView%5D%5Breasons%5D%5B1%5D=obstructed&data%5BadView%5D%5Bgeometry%5D%5Bwidth%5D=414&data%5BadView%5D%5Bgeometry%5D%5Bheight%5D=690&data%5BadView%5D%5Bgeometry%5D%5Bx%5D=-103.5&data%5BadView%5D%5Bgeometry%5D%5By%5D=172&data%5BadView%5D%5Bgeometry%5D%5Bpixels%5D=285660&data%5BadView%5D%5BonScreenGeometry%5D%5Bwidth%5D=310.5&data%5BadView%5D%5BonScreenGeometry%5D%5Bheight%5D=690&data%5BadView%5D%5BonScreenGeometry%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5By%5D=172&data%5BadView%5D%5BonScreenGeometry%5D%5Bpixels%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bwidth%5D=414&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bheight%5D=896&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5Bx%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5Bobstructions%5D%5B0%5D%5By%5D=0&data%5BadView%5D%5BonScreenGeometry%5D%5BfriendlyObstructions%5D=%5B%5D&data%5BdeclaredFriendlyObstructions%5D=0&rawJSON=%7B%22adSessionId%22%3A%22%22%2C%22timestamp%22%3A1669047663491%2C%22type%22%3A%22geometryChange%22%2C%22data%22%3A%7B%22viewport%22%3A%7B%22width%22%3A414%2C%22height%22%3A896%7D%2C%22adView%22%3A%7B%22percentageInView%22%3A0%2C%22pixelsInView%22%3A0%2C%22reasons%22%3A%5B%22clipped%22%2C%22obstructed%22%5D%2C%22geometry%22%3A%7B%22width%22%3A414%2C%22height%22%3A690%2C%22x%22%3A-103.5%2C%22y%22%3A172%2C%22pixels%22%3A285660%7D%2C%22onScreenGeometry%22%3A%7B%22width%22%3A310.5%2C%22height%22%3A690%2C%22x%22%3A0%2C%22y%22%3A172%2C%22pixels%22%3A0%2C%22obstructions%22%3A%5B%7B%22width%22%3A414%2C%22height%22%3A896%2C%22x%22%3A0%2C%22y%22%3A0%7D%5D%2C%22friendlyObstructions%22%3A%5B%5D%7D%7D%2C%22declaredFriendlyObstructions%22%3A0%7D%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:04 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	},
+	{
+		"status": "COMPLETE",
+		"method": "GET",
+		"protocolVersion": "HTTP/2.0",
+		"scheme": "https",
+		"host": "compliance-omsdk.iabtechlab.org",
+		"actualPort": 443,
+		"path": "/logapi/logomsdk",
+		"query": "token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047663630&type=sessionFinish&data=undefined&rawJSON=%7B%22adSessionId%22%3A%22B9F5ACC3-0C15-4147-B137-3AB3C296CE61%22%2C%22timestamp%22%3A1669047663630%2C%22type%22%3A%22sessionFinish%22%7D",
+		"tunnel": false,
+		"keptAlive": true,
+		"webSocket": false,
+		"remoteAddress": "compliance-omsdk.iabtechlab.org/54.91.192.190",
+		"clientAddress": "/192.168.29.7",
+		"clientPort": 62921,
+		"times": {
+			"start": "2022-11-21T21:51:04.418+05:30",
+			"requestBegin": "2022-11-21T21:51:04.418+05:30",
+			"requestComplete": "2022-11-21T21:51:04.418+05:30",
+			"responseBegin": "2022-11-21T21:51:07.983+05:30",
+			"end": "2022-11-21T21:51:08.005+05:30"
+		},
+		"durations": {
+			"total": 3587,
+			"dns": null,
+			"connect": null,
+			"ssl": null,
+			"request": 0,
+			"response": 22,
+			"latency": 3565
+		},
+		"speeds": {
+			"overall": 108,
+			"request": 0,
+			"response": 7090
+		},
+		"totalSize": 390,
+		"ssl": {
+			"protocol": "TLSv1.2",
+			"cipherSuite": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+		},
+		"alpn": {
+			"protocol": "h2"
+		},
+		"request": {
+			"sizes": {
+				"headers": 234,
+				"body": 0
+			},
+			"mimeType": null,
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":method",
+						"value": "GET"
+					},
+					{
+						"name": ":scheme",
+						"value": "https"
+					},
+					{
+						"name": ":path",
+						"value": "/logapi/logomsdk?token=803a0bd284ff47e3b5b041a61f42e1a3&adSessionId=&timestamp=1669047663630&type=sessionFinish&data=undefined&rawJSON=%7B%22adSessionId%22%3A%22B9F5ACC3-0C15-4147-B137-3AB3C296CE61%22%2C%22timestamp%22%3A1669047663630%2C%22type%22%3A%22sessionFinish%22%7D"
+					},
+					{
+						"name": ":authority",
+						"value": "compliance-omsdk.iabtechlab.org"
+					},
+					{
+						"name": "user-agent",
+						"value": "NimbusInternalSampleApp/53 CFNetwork/1390 Darwin/22.0.0"
+					},
+					{
+						"name": "accept",
+						"value": "*/*"
+					},
+					{
+						"name": "accept-language",
+						"value": "en-IN,en-GB;q=0.9,en;q=0.8"
+					},
+					{
+						"name": "accept-encoding",
+						"value": "gzip, deflate, br"
+					}
+				]
+			}
+		},
+		"response": {
+			"status": 200,
+			"sizes": {
+				"headers": 106,
+				"body": 50
+			},
+			"mimeType": "application/json",
+			"charset": null,
+			"contentEncoding": null,
+			"header": {
+				"headers": [
+					{
+						"name": ":status",
+						"value": "200"
+					},
+					{
+						"name": "date",
+						"value": "Mon, 21 Nov 2022 16:21:07 GMT"
+					},
+					{
+						"name": "content-type",
+						"value": "application/json"
+					},
+					{
+						"name": "vary",
+						"value": "Origin"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Method"
+					},
+					{
+						"name": "vary",
+						"value": "Access-Control-Request-Headers"
+					}
+				]
+			},
+			"body": {
+				"text": "{\"data\":\"\",\"meta\":{\"code\":200,\"status\":\"success\"}}",
+				"charset": null
+			}
+		}
+	}
+]
