@@ -21,6 +21,14 @@ public class SessionStartResult {
 	private String supportsLoadedEventExists;
 	private String pageUrlExists;
 	private String contentUrlExists;
+	private String partnerNameExists;
+	private String partnerVersionExists;
+	private String serviceVersionExists;
+	private String omidImplementerExists;
+	private String supportsExists;
+	private String libraryExists;
+	private String deviceTypeExists;
+	
 
 	public String getAdSessionIdExists() {
 		return adSessionIdExists;
@@ -142,4 +150,60 @@ public class SessionStartResult {
 		this.contentUrlExists = contentUrlExists;
 	}
 
+	public String getPartnerNameExists() {
+		return partnerNameExists;
+	}
+
+	public void setPartnerNameExists(String partnerNameExists) {
+		this.partnerNameExists = partnerNameExists;
+	}
+
+	public String getPartnerVersionExists() {
+		return partnerVersionExists;
+	}
+
+	public void setPartnerVersionExists(String partnerVersionExists) {
+		this.partnerVersionExists = partnerVersionExists;
+	}
+
+	public String getServiceVersionExists() {
+		return serviceVersionExists;
+	}
+
+	public void setServiceVersionExists(String serviceVersionExists) {
+		this.serviceVersionExists = serviceVersionExists;
+	}
+
+	public String getOmidImplementerExists() {
+		return omidImplementerExists;
+	}
+
+	public void setOmidImplementerExists(String omidImplementerExists) {
+		this.omidImplementerExists = omidImplementerExists;
+	}
+
+	public String getSupportsExists() {
+		return supportsExists;
+	}
+
+	public void setSupportsExists(String supportsExists) {
+		this.supportsExists = supportsExists;
+	}
+
+	public String getLibraryExists() {
+		return libraryExists;
+	}
+
+	public void setLibraryExists(String libraryExists) {
+		this.libraryExists = libraryExists;
+	}
+
+	public String getDeviceTypeExists() {
+		return deviceTypeExists;
+	}
+
+	public void setDeviceTypeExists(String deviceTypeExists) {
+		this.deviceTypeExists = deviceTypeExists;
+	}
+		
 	}

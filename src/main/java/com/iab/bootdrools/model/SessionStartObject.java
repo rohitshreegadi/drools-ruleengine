@@ -35,11 +35,13 @@ public class SessionStartObject {
 	private boolean	supportsLoadedEvent;
 	private String pageUrl;
 	private String contentUrl;
+	private String[] supports;
 	
+
 	public SessionStartObject(String adSessionId, int adSessionIdLength, String adSessionIdExists, String partner,
 			String accessMode, String apiVersion, String adSessionType, String mediaType, String creativeType,
 			String appId, String libraryVersion, String platform, String deviceType, String platformVersion,
-			String type, String timestamp, String verificationParameters , String environment ,String partnerVersion,String partnerName ,String serviceVersion,String omidImplementer,String os,String osVersion, String impressionType,Boolean supportsLoadedEvent, String pageUrl, String contentUrl) {
+			String type, String timestamp, String verificationParameters , String environment ,String partnerVersion,String partnerName ,String serviceVersion,String omidImplementer,String os,String osVersion, String impressionType,Boolean supportsLoadedEvent, String pageUrl, String contentUrl,String[] supports) {
 		super();
 		this.adSessionId = adSessionId;
 		this.adSessionIdLength = adSessionIdLength;
@@ -69,6 +71,8 @@ public class SessionStartObject {
 		this.supportsLoadedEvent = supportsLoadedEvent;
 		this.pageUrl = pageUrl;
 		this.contentUrl = contentUrl;
+		this.supports = supports;
+
 	}
 
 	public String getId() {
@@ -302,4 +306,13 @@ public class SessionStartObject {
 	public void setContentUrl(String contentUrl) {
 		this.contentUrl = contentUrl;
 	}
+
+	public String[] getSupports() {
+		return supports;
+	}
+
+	public void setSupports(String[] supports) {
+		this.supports = supports;
+	}
+	
 }
