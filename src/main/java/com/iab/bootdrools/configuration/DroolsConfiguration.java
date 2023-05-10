@@ -32,7 +32,7 @@ public class DroolsConfiguration {
 	@Bean
 	public KieContainer kieContainer() {
 		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-		kieFileSystem.write(ResourceFactory.newClassPathResource("complaince_rules_geometryChange.xlsx"));
+		kieFileSystem.write(ResourceFactory.newClassPathResource("complaince_rules_sessionFinish.xlsx"));
 		
 		KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
 		kb.buildAll();
