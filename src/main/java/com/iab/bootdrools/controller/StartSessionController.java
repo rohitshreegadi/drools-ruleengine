@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.iab.bootdrools.model.SessionFinishResult;
+import com.iab.bootdrools.model.LoadedResult;
 import com.iab.bootdrools.service.StartSessionService;
 
 @RestController
@@ -27,11 +27,11 @@ public class StartSessionController {
 //		return new ResponseEntity<>(results, HttpStatus.OK);
 //	}
 
-//	@GetMapping("/getLoadedResult")
-//	public ResponseEntity<LoadedResult> getLoadedResult() {
-//		LoadedResult results = startSessionService.getLoaded();
-//		return new ResponseEntity<>(results, HttpStatus.OK);
-//	}
+	@GetMapping("/getLoadedResult")
+	public ResponseEntity<Object> getLoadedResult() {
+		Object results = startSessionService.getLoaded();
+		return new ResponseEntity<>(results, HttpStatus.OK);
+	}
 	
 //	@GetMapping("/getImpressionResult")
 //    public ResponseEntity<ImpressionResult> getImpressionResult() {
@@ -39,9 +39,9 @@ public class StartSessionController {
 //        return new ResponseEntity<>(results, HttpStatus.OK);
 //    }
 	
-	@GetMapping("/getSessionFinishResult")
-	public ResponseEntity<SessionFinishResult> getSessionFinishResult() {
-		SessionFinishResult results = startSessionService.getSessionFinish();
-		return new ResponseEntity<>(results, HttpStatus.OK);
-	}
+//	@GetMapping("/getSessionFinishResult")
+//	public ResponseEntity<SessionFinishResult> getSessionFinishResult() {
+//		SessionFinishResult results = startSessionService.getSessionFinish();
+//		return new ResponseEntity<>(results, HttpStatus.OK);
+//	}
 }

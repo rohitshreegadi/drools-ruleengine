@@ -34,10 +34,11 @@ import com.iab.bootdrools.model.LoadedObject;
 @Service
 public class JSONParserService {
 	
-	public LoadedObject jsonFlattenLoaded(String jsonObject) {
+	public String jsonFlattenLoaded(String jsonObject) {
 
 		String flattenedJson = JsonFlattener.flatten(jsonObject.toString())
-				.replaceAll("data.", "").replace("viewport.", "").replaceAll("adView.", "");
+				.replaceAll("data.", "").replace("viewport.", "").replaceAll("adView.", "").replaceAll("data.context.", "").replaceAll("context.", "")
+				.replace("app.", "").replaceAll("omidNativeInfo.", "").replaceAll("omidJsInfo.", "").replace("deviceInfo.", "");
 		LoadedObject loadedObject;
 		//System.err.println(flattenedJson);
 		JSONObject jsonObj = new JSONObject(flattenedJson);
@@ -53,27 +54,31 @@ public class JSONParserService {
        // System.err.println(newJsonStr);
 		Gson g = new Gson();
 		loadedObject = g.fromJson(newJsonStr, LoadedObject.class);
-		return loadedObject;
+	//	return loadedObject;
+		//System.err.println(newJsonStr);
+		return newJsonStr;
+
 	}
 
-	public LoadedObject getloadedObject() {
+	public Object getloadedObject() {
 		JsonParser jsonParser;
-		LoadedObject loadedObject = null;
+		Object loadedObject = null;
+		Object loadedObject1 = null;
 		try {
 			jsonParser = Json.createParser(new FileInputStream("src/main/resources/Charles.json"));
 			boolean flag = false;
 
 			while (jsonParser.hasNext()) {
-				int i=1;
+//				int i=1;
 				Event event = jsonParser.next();
-				System.err.println(i++);
+//				System.err.println(i++);
 				switch (event) {
 				case VALUE_STRING:
 				//	System.err.println(flag);
 					if (!flag) {
 						String input = jsonParser.getString();
-//						System.err.println(event);
-//						System.err.println(input);
+						if(!input.contains("/logapi/logomsdk?")) {
+//					
 						Pattern pattern = Pattern.compile("type=(.*?)&");
 						Matcher matcher = pattern.matcher(input);
 
@@ -86,17 +91,18 @@ public class JSONParserService {
 							System.err.println();
 							int startIndex = jsonParser.getString().indexOf("rawJSON=");
 							String omsdkJson = URLDecoder.decode(jsonParser.getString().substring(startIndex + 8));
-							// System.out.println("String values: " + omsdkJson);
-							 loadedObject = jsonFlattenLoaded(omsdkJson);
+					//		 System.out.println("String values: " + omsdkJson);
+							loadedObject = jsonFlattenLoaded(omsdkJson);
+						//	System.err.println(loadedObject1);
+							flag = false;
 							
-							flag = true;
-							Map<String , Object> map = new HashMap<>();
-						//	map.put(data, map)
+						
 						}
 					}
 					}
+					}
 
-//					break;
+				//	break;
 //
 //				default:
 //					break;
@@ -109,6 +115,7 @@ public class JSONParserService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	
 		return loadedObject;
 
 	}

@@ -44,16 +44,17 @@ public class StartSessionService {
 //        return geometryChangeResult;
 //    }
 
-//	public LoadedResult getLoaded() {
-//		LoadedObject loadedObject = jsonParserService.getloadedObject();
-//		LoadedResult loadedResult = new LoadedResult();
-//		KieSession kieSession = kieContainer.newKieSession();
-//		kieSession.setGlobal("loadedResult", loadedResult);
-//		kieSession.insert(loadedObject);
-//		kieSession.fireAllRules();
-//		kieSession.dispose();
-//		return loadedResult;
-//	}
+	public Object getLoaded() {
+		Object loadedObject = jsonParserService.getloadedObject();
+		System.err.println(loadedObject);
+		LoadedResult loadedResult = new LoadedResult();
+		KieSession kieSession = kieContainer.newKieSession();
+		kieSession.setGlobal("loadedResult", loadedResult);
+		kieSession.insert(loadedObject);
+		kieSession.fireAllRules();
+		kieSession.dispose();
+		return loadedResult;
+	}
 	
 //	public ImpressionResult getImpression() {
 //        ImpressionObject impressionObject = jsonParserService.getImpressionObject();
@@ -66,15 +67,15 @@ public class StartSessionService {
 //        return impressionResult;
 //    }
 	
-	public SessionFinishResult getSessionFinish() {
-		SessionFinishObject sessionFinishObject = jsonParserService.getSessionFinishObject();
-		SessionFinishResult sessionFinishResult = new SessionFinishResult();
-		KieSession kieSession = kieContainer.newKieSession();
-		kieSession.setGlobal("sessionFinishResult", sessionFinishResult);
-		kieSession.insert(sessionFinishObject);
-		kieSession.fireAllRules();
-		kieSession.dispose();
-		return sessionFinishResult;
-	}
+//	public SessionFinishResult getSessionFinish() {
+//		SessionFinishObject sessionFinishObject = jsonParserService.getSessionFinishObject();
+//		SessionFinishResult sessionFinishResult = new SessionFinishResult();
+//		KieSession kieSession = kieContainer.newKieSession();
+//		kieSession.setGlobal("sessionFinishResult", sessionFinishResult);
+//		kieSession.insert(sessionFinishObject);
+//		kieSession.fireAllRules();
+//		kieSession.dispose();
+//		return sessionFinishResult;
+//	}
 
 	}
