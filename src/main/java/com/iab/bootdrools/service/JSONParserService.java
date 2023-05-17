@@ -28,6 +28,8 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import com.github.wnameless.json.flattener.JsonFlattener;
+import com.google.gson.Gson;
+import com.iab.bootdrools.model.ImpressionObject;
 
 @Service
 public class JSONParserService {
@@ -37,8 +39,6 @@ public class JSONParserService {
 		String flattenedJson = JsonFlattener.flatten(jsonObject.toString())
 				.replaceAll("data.", "").replace("viewport.", "").replaceAll("adView.", "").replaceAll("data.context.", "").replaceAll("context.", "")
 				.replace("app.", "").replaceAll("omidNativeInfo.", "").replaceAll("omidJsInfo.", "").replace("deviceInfo.", "");
-//		LoadedObject loadedObject;
-		//System.err.println(flattenedJson);
 		JSONObject jsonObj = new JSONObject(flattenedJson);
         JSONObject newJsonObj = new JSONObject();
         
@@ -49,11 +49,6 @@ public class JSONParserService {
         }
         
         String newJsonStr = newJsonObj.toString();
-       // System.err.println(newJsonStr);
-//		Gson g = new Gson();
-//		loadedObject = g.fromJson(newJsonStr, LoadedObject.class);
-	//	return loadedObject;
-		//System.err.println(newJsonStr);
 		return newJsonStr;
 
 	}
@@ -119,4 +114,5 @@ public class JSONParserService {
 		return map;
 
 	}
+	
 }

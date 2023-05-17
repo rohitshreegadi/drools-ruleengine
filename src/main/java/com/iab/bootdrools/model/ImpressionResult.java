@@ -1,7 +1,6 @@
 package com.iab.bootdrools.model;
 
 public class ImpressionResult {
-	private String id;
 	private String adSessionIdExists;
 	private String mediaTypeExists;
 	private String onScreenGeometryheightExists;
@@ -22,14 +21,7 @@ public class ImpressionResult {
 	private String onScreenGeometryPixelsExists;
 	private String declaredFriendlyObstructionsExists;
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
+	
 	public String getAdSessionIdExists() {
 		return adSessionIdExists;
 	}

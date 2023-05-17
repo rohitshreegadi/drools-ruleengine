@@ -7,28 +7,30 @@ package com.iab.bootdrools.model;
 public class SessionStartResult {
 
 	private String adSessionIdExists;
-	private String adSessionTypeExists;
-	private String accessModeExists;
-	private String mediaTypeExists;
-	private String creativeTypeExists;
-	private String verificationParametersExists;
-	private String environmentExists;
-	private String omidNativeInfoExists;  //Remove AND condition from Excel and take the separate values for each value 
-	private String omidJsInfoExists;      //Remove AND condition from Excel and take the separate values for each value 
-	private String appExists;				//Remove AND condition from Excel and take the separate values for each value 
-	private String deviceInfoExists;		//Remove AND condition from Excel and take the separate values for each value 
-	private String adLoadedExists;				//Remove AND condition from Excel and take the separate values for each value 
-	private String supportsLoadedEventExists;
-	private String pageUrlExists;
-	private String contentUrlExists;
-	private String partnerNameExists;
-	private String partnerVersionExists;
-	private String serviceVersionExists;
-	private String omidImplementerExists;
-	private String supportsExists;
-	private String libraryExists;
-	private String deviceTypeExists;
-	
+    private String adSessionTypeExists;
+    private String accessModeExists;
+    private String mediaTypeExists;
+    private String creativeTypeExists;
+    private String verificationParametersExists;
+    private String environmentExists;
+    private String omidNativeInfoExists;  //Remove AND condition from Excel and take the separate values for each value 
+    private String omidJsInfoExists;      //Remove AND condition from Excel and take the separate values for each value 
+    private String appExists;                //Remove AND condition from Excel and take the separate values for each value 
+    private String deviceInfoExists;        //Remove AND condition from Excel and take the separate values for each value 
+    private String adLoadedExists;                //Remove AND condition from Excel and take the separate values for each value 
+    private String supportsLoadedEventExists;
+    private String pageUrlExists;
+    private String contentUrlExists;
+    private String partnerNameExists;
+    private String partnerVersionExists;
+    private String serviceVersionExists;
+    private String omidImplementerExists;
+    private String libraryExists;
+    private String deviceTypeExists;
+	private String osVersionExists;
+	private String osExists;
+	private String impressionTypeExists;
+
 
 	public String getAdSessionIdExists() {
 		return adSessionIdExists;
@@ -182,14 +184,7 @@ public class SessionStartResult {
 		this.omidImplementerExists = omidImplementerExists;
 	}
 
-	public String getSupportsExists() {
-		return supportsExists;
-	}
-
-	public void setSupportsExists(String supportsExists) {
-		this.supportsExists = supportsExists;
-	}
-
+	
 	public String getLibraryExists() {
 		return libraryExists;
 	}
@@ -204,6 +199,30 @@ public class SessionStartResult {
 
 	public void setDeviceTypeExists(String deviceTypeExists) {
 		this.deviceTypeExists = deviceTypeExists;
+	}
+
+	public String getOsVersionExists() {
+		return osVersionExists;
+	}
+
+	public void setOsVersionExists(String osVersionExists) {
+		this.osVersionExists = osVersionExists;
+	}
+
+	public String getOsExists() {
+		return osExists;
+	}
+
+	public void setOsExists(String osExists) {
+		this.osExists = osExists;
+	}
+
+	public String getImpressionTypeExists() {
+		return impressionTypeExists;
+	}
+
+	public void setImpressionTypeExists(String impressionTypeExists) {
+		this.impressionTypeExists = impressionTypeExists;
 	}
 		
 	}

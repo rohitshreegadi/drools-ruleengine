@@ -1,8 +1,6 @@
 package com.iab.bootdrools.service;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.kie.api.runtime.KieContainer;
@@ -11,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
+import com.iab.bootdrools.model.GeometryChangeObject;
+import com.iab.bootdrools.model.GeometryChangeResult;
 import com.iab.bootdrools.model.ImpressionObject;
+import com.iab.bootdrools.model.ImpressionResult;
 import com.iab.bootdrools.model.LoadedObject;
 import com.iab.bootdrools.model.LoadedResult;
 import com.iab.bootdrools.model.SessionFinishObject;
@@ -28,31 +29,28 @@ public class StartSessionService {
 
 	@Autowired
     private KieContainer kieContainer;
-	//Todo
-	//getSessionStartResults multiple sheet code Not woking -Nikhil 
 	
-//	public SessionStartResult getSessionStartResults(Object Object1) {   
-//		
-//		SessionStartResult sessionStartResult = new SessionStartResult();
-//		KieSession kieSession = kieContainer.newKieSession();
-//		kieSession.setGlobal("sessionStartResult", sessionStartResult);
-//		kieSession.insert(Object1);
-//		kieSession.fireAllRules();
-//		kieSession.dispose();
-//		System.err.println(sessionStartResult);
-//		return sessionStartResult;
-//	}
+	public SessionStartResult getSessionStartResults(Object Object1) {   
+		
+		SessionStartResult sessionStartResult = new SessionStartResult();
+		KieSession kieSession = kieContainer.newKieSession();
+		kieSession.setGlobal("sessionStartResult", sessionStartResult);
+		kieSession.insert(Object1);
+		kieSession.fireAllRules();
+		kieSession.dispose();
+		System.err.println(sessionStartResult);
+		return sessionStartResult;
+	}
 	
-//	public GeometryChangeResult getGeometryChange() {
-//        GeometryChangeObject geometryChangeObject = jsonParserService.getGeometryObject();
-//        GeometryChangeResult geometryChangeResult = new GeometryChangeResult();
-//        KieSession kieSession = kieContainer.newKieSession();
-//        kieSession.setGlobal("geometryChangeResult", geometryChangeResult);
-//        kieSession.insert(geometryChangeObject);
-//        kieSession.fireAllRules();
-//        kieSession.dispose();
-//        return geometryChangeResult;
-//    }
+	public GeometryChangeResult getGeometryChange(Object geometryChangeObject) {
+        GeometryChangeResult geometryChangeResult = new GeometryChangeResult();
+        KieSession kieSession = kieContainer.newKieSession();
+        kieSession.setGlobal("geometryChangeResult", geometryChangeResult);
+        kieSession.insert(geometryChangeObject);
+        kieSession.fireAllRules();
+        kieSession.dispose();
+        return geometryChangeResult;
+    }
 
 	public Object getLoaded() {
 		Map<String, String> loadedObject = jsonParserService.getloadedObject();
@@ -79,6 +77,30 @@ public class StartSessionService {
 //			list.add(result1);
 			map.put(key, result1);
 			break;
+		
+		case "sessionStart":
+			Gson g11 = new Gson();
+			SessionStartObject	Object111 = g11.fromJson(value, SessionStartObject.class);
+			SessionStartResult result11=	getSessionStartResults(Object111);
+//			list.add(result1);
+			map.put(key, result11);
+			break;	
+			
+		case "geometryChange":
+			Gson geometry = new Gson();
+			GeometryChangeObject	geometryObj = geometry.fromJson(value, GeometryChangeObject.class);
+			GeometryChangeResult geometryresult=	getGeometryChange(geometryObj);
+//			list.add(result1);
+			map.put(key, geometryresult);
+			break;		
+			
+		case "impression":
+			Gson impression = new Gson();
+			ImpressionObject	impressionObj = impression.fromJson(value, ImpressionObject.class);
+			ImpressionResult impressionresult=	getImpression(impressionObj);
+//			list.add(result1);
+			map.put(key, impressionresult);
+			break;		
 		default:
 			break;
 		}
@@ -88,15 +110,16 @@ public class StartSessionService {
 		
 	}
 	
-//	public ImpressionResult getImpression(Object impressionObject) {
-//        ImpressionResult impressionResult = new ImpressionResult();
-//        KieSession kieSession = kieContainer.newKieSession();
-//        kieSession.setGlobal("impressionResult", impressionResult);
-//        kieSession.insert(impressionObject);
-//        kieSession.fireAllRules();
-//        kieSession.dispose();
-//        return impressionResult;
-//    }
+	public ImpressionResult getImpression(Object impressionObject) {
+		
+        ImpressionResult impressionResult = new ImpressionResult();
+        KieSession kieSession = kieContainer.newKieSession();
+        kieSession.setGlobal("impressionResult", impressionResult);
+        kieSession.insert(impressionObject);
+        kieSession.fireAllRules();
+        kieSession.dispose();
+        return impressionResult;
+    }
 	
 	public SessionFinishResult getSessionFinish(Object sessionFinishObject) {
 		SessionFinishResult sessionFinishResult = new SessionFinishResult();
