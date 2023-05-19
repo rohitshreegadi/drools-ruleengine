@@ -30,6 +30,15 @@ public class SessionStartResult {
 	private String osVersionExists;
 	private String osExists;
 	private String impressionTypeExists;
+	private String query;
+
+	public String getQuery() {
+		return query;
+	}
+
+	public void setQuery(String query) {
+		this.query = query;
+	}
 
 
 	public String getAdSessionIdExists() {

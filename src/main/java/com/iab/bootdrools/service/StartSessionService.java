@@ -53,18 +53,21 @@ public class StartSessionService {
     }
 
 	public Object getLoaded() {
-		Map<String, String> loadedObject = jsonParserService.getloadedObject();
+		Map<String, Object> loadedObject = jsonParserService.getloadedObject();
 //		List<Object> list = new ArrayList<>();
 		Map<String, Object> map=  new HashMap<>(); 
 		//LoadedResult loadedResult = new LoadedResult();
 		for (String key : loadedObject.keySet()) {
-		    String value = loadedObject.get(key);
+		    Map<String , String> getvalue = (Map<String, String>) loadedObject.get(key);
+		   String value = getvalue.get("drool");
+		   String query = getvalue.get("original");
 		    String keys = key.replaceAll("\\d", "");
 		switch (keys) {
 		case "loaded":
 			Gson g = new Gson();
 			LoadedObject	Object1 = g.fromJson(value, LoadedObject.class);
 			LoadedResult result=	getloadedTest(Object1);
+			result.setQuery(query);
 //			list.add(result);
 			map.put(key, result);
 			
@@ -75,6 +78,7 @@ public class StartSessionService {
 			SessionFinishObject	Object11 = g1.fromJson(value, SessionFinishObject.class);
 			SessionFinishResult result1=	getSessionFinish(Object11);
 //			list.add(result1);
+			result1.setQuery(query);
 			map.put(key, result1);
 			break;
 		
@@ -83,6 +87,7 @@ public class StartSessionService {
 			SessionStartObject	Object111 = g11.fromJson(value, SessionStartObject.class);
 			SessionStartResult result11=	getSessionStartResults(Object111);
 //			list.add(result1);
+			result11.setQuery(query);
 			map.put(key, result11);
 			break;	
 			
@@ -91,6 +96,7 @@ public class StartSessionService {
 			GeometryChangeObject	geometryObj = geometry.fromJson(value, GeometryChangeObject.class);
 			GeometryChangeResult geometryresult=	getGeometryChange(geometryObj);
 //			list.add(result1);
+			geometryresult.setQuery(query);
 			map.put(key, geometryresult);
 			break;		
 			
@@ -99,6 +105,7 @@ public class StartSessionService {
 			ImpressionObject	impressionObj = impression.fromJson(value, ImpressionObject.class);
 			ImpressionResult impressionresult=	getImpression(impressionObj);
 //			list.add(result1);
+			impressionresult.setQuery(query);
 			map.put(key, impressionresult);
 			break;		
 		default:

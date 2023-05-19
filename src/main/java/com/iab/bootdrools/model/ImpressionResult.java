@@ -1,178 +1,147 @@
 package com.iab.bootdrools.model;
 
 public class ImpressionResult {
-	private String adSessionIdExists;
-	private String mediaTypeExists;
-	private String onScreenGeometryheightExists;
-	private String onScreenGeometrywidthExists;
-	private String pixelsInViewExists;
-	private String creativeTypeExists;
-	private String geometrywidthExists;
-	private String geometryheightExists;
-	private String geometrypixelsExists;
-	private String heightExists;
-	private String widthExists;
-	private String onScreenGeometryxExists;
-	private String onScreenGeometryyExists;
-	private String geometryxExists;
-	private String geometryyExists;
-	private String percentageInViewExists;
-	private String impressionTypeExists;
-	private String onScreenGeometryPixelsExists;
-	private String declaredFriendlyObstructionsExists;
+	private String adSessionId;
+	private String mediaType;
+	private String onScreenGeometryheight;
+	private String onScreenGeometrywidth;
+	private String pixelsInView;
+	private String creativeType;
+	private String geometrywidth;
+	private String geometryheight;
+	private String geometrypixels;
+	private String height;
+	private String width;
+	private String onScreenGeometryx;
+	private String onScreenGeometryy;
+	private String geometryx;
+	private String geometryy;
+	private String percentageInView;
+	private String impressionType;
+	private String onScreenGeometryPixels;
+	private String declaredFriendlyObstructions;
+	private String query;
 
-	
-	public String getAdSessionIdExists() {
-		return adSessionIdExists;
+	public String getQuery() {
+		return query;
 	}
 
-	public void setAdSessionIdExists(String adSessionIdExists) {
-		this.adSessionIdExists = adSessionIdExists;
+	public void setQuery(String query) {
+		this.query = query;
 	}
-
-	public String getMediaTypeExists() {
-		return mediaTypeExists;
+	public String getAdSessionId() {
+		return adSessionId;
 	}
-
-	public void setMediaTypeExists(String mediaTypeExists) {
-		this.mediaTypeExists = mediaTypeExists;
+	public void setAdSessionId(String adSessionId) {
+		this.adSessionId = adSessionId;
 	}
-
-	public String getOnScreenGeometryheightExists() {
-		return onScreenGeometryheightExists;
+	public String getMediaType() {
+		return mediaType;
 	}
-
-	public void setOnScreenGeometryheightExists(String onScreenGeometryheightExists) {
-		this.onScreenGeometryheightExists = onScreenGeometryheightExists;
+	public void setMediaType(String mediaType) {
+		this.mediaType = mediaType;
 	}
-
-	public String getOnScreenGeometrywidthExists() {
-		return onScreenGeometrywidthExists;
+	public String getOnScreenGeometryheight() {
+		return onScreenGeometryheight;
 	}
-
-	public void setOnScreenGeometrywidthExists(String onScreenGeometrywidthExists) {
-		this.onScreenGeometrywidthExists = onScreenGeometrywidthExists;
+	public void setOnScreenGeometryheight(String onScreenGeometryheight) {
+		this.onScreenGeometryheight = onScreenGeometryheight;
 	}
-
-	public String getPixelsInViewExists() {
-		return pixelsInViewExists;
+	public String getOnScreenGeometrywidth() {
+		return onScreenGeometrywidth;
 	}
-
-	public void setPixelsInViewExists(String pixelsInViewExists) {
-		this.pixelsInViewExists = pixelsInViewExists;
+	public void setOnScreenGeometrywidth(String onScreenGeometrywidth) {
+		this.onScreenGeometrywidth = onScreenGeometrywidth;
 	}
-
-	public String getCreativeTypeExists() {
-		return creativeTypeExists;
+	public String getPixelsInView() {
+		return pixelsInView;
 	}
-
-	public void setCreativeTypeExists(String creativeTypeExists) {
-		this.creativeTypeExists = creativeTypeExists;
+	public void setPixelsInView(String pixelsInView) {
+		this.pixelsInView = pixelsInView;
 	}
-
-	public String getGeometrywidthExists() {
-		return geometrywidthExists;
+	public String getCreativeType() {
+		return creativeType;
 	}
-
-	public void setGeometrywidthExists(String geometrywidthExists) {
-		this.geometrywidthExists = geometrywidthExists;
+	public void setCreativeType(String creativeType) {
+		this.creativeType = creativeType;
 	}
-
-	public String getGeometryheightExists() {
-		return geometryheightExists;
+	public String getGeometrywidth() {
+		return geometrywidth;
 	}
-
-	public void setGeometryheightExists(String geometryheightExists) {
-		this.geometryheightExists = geometryheightExists;
+	public void setGeometrywidth(String geometrywidth) {
+		this.geometrywidth = geometrywidth;
 	}
-
-	public String getGeometrypixelsExists() {
-		return geometrypixelsExists;
+	public String getGeometryheight() {
+		return geometryheight;
 	}
-
-	public void setGeometrypixelsExists(String geometrypixelsExists) {
-		this.geometrypixelsExists = geometrypixelsExists;
+	public void setGeometryheight(String geometryheight) {
+		this.geometryheight = geometryheight;
 	}
-
-	public String getHeightExists() {
-		return heightExists;
+	public String getGeometrypixels() {
+		return geometrypixels;
 	}
-
-	public void setHeightExists(String heightExists) {
-		this.heightExists = heightExists;
+	public void setGeometrypixels(String geometrypixels) {
+		this.geometrypixels = geometrypixels;
 	}
-
-	public String getWidthExists() {
-		return widthExists;
+	public String getHeight() {
+		return height;
 	}
-
-	public void setWidthExists(String widthExists) {
-		this.widthExists = widthExists;
+	public void setHeight(String height) {
+		this.height = height;
 	}
-
-	public String getOnScreenGeometryxExists() {
-		return onScreenGeometryxExists;
+	public String getWidth() {
+		return width;
 	}
-
-	public void setOnScreenGeometryxExists(String onScreenGeometryxExists) {
-		this.onScreenGeometryxExists = onScreenGeometryxExists;
+	public void setWidth(String width) {
+		this.width = width;
 	}
-
-	public String getOnScreenGeometryyExists() {
-		return onScreenGeometryyExists;
+	public String getOnScreenGeometryx() {
+		return onScreenGeometryx;
 	}
-
-	public void setOnScreenGeometryyExists(String onScreenGeometryyExists) {
-		this.onScreenGeometryyExists = onScreenGeometryyExists;
+	public void setOnScreenGeometryx(String onScreenGeometryx) {
+		this.onScreenGeometryx = onScreenGeometryx;
 	}
-
-	public String getGeometryxExists() {
-		return geometryxExists;
+	public String getOnScreenGeometryy() {
+		return onScreenGeometryy;
 	}
-
-	public void setGeometryxExists(String geometryxExists) {
-		this.geometryxExists = geometryxExists;
+	public void setOnScreenGeometryy(String onScreenGeometryy) {
+		this.onScreenGeometryy = onScreenGeometryy;
 	}
-
-	public String getGeometryyExists() {
-		return geometryyExists;
+	public String getGeometryx() {
+		return geometryx;
 	}
-
-	public void setGeometryyExists(String geometryyExists) {
-		this.geometryyExists = geometryyExists;
+	public void setGeometryx(String geometryx) {
+		this.geometryx = geometryx;
 	}
-
-	public String getPercentageInViewExists() {
-		return percentageInViewExists;
+	public String getGeometryy() {
+		return geometryy;
 	}
-
-	public void setPercentageInViewExists(String percentageInViewExists) {
-		this.percentageInViewExists = percentageInViewExists;
+	public void setGeometryy(String geometryy) {
+		this.geometryy = geometryy;
 	}
-
-	public String getImpressionTypeExists() {
-		return impressionTypeExists;
+	public String getPercentageInView() {
+		return percentageInView;
 	}
-
-	public void setImpressionTypeExists(String impressionTypeExists) {
-		this.impressionTypeExists = impressionTypeExists;
+	public void setPercentageInView(String percentageInView) {
+		this.percentageInView = percentageInView;
 	}
-
-	public String getDeclaredFriendlyObstructionsExists() {
-		return declaredFriendlyObstructionsExists;
+	public String getImpressionType() {
+		return impressionType;
 	}
-
-	public void setDeclaredFriendlyObstructionsExists(String declaredFriendlyObstructionsExists) {
-		this.declaredFriendlyObstructionsExists = declaredFriendlyObstructionsExists;
+	public void setImpressionType(String impressionType) {
+		this.impressionType = impressionType;
 	}
-
-	public String getOnScreenGeometryPixelsExists() {
-		return onScreenGeometryPixelsExists;
+	public String getOnScreenGeometryPixels() {
+		return onScreenGeometryPixels;
 	}
-
-	public void setOnScreenGeometryPixelsExists(String onScreenGeometryPixelsExists) {
-		this.onScreenGeometryPixelsExists = onScreenGeometryPixelsExists;
+	public void setOnScreenGeometryPixels(String onScreenGeometryPixels) {
+		this.onScreenGeometryPixels = onScreenGeometryPixels;
 	}
-
+	public String getDeclaredFriendlyObstructions() {
+		return declaredFriendlyObstructions;
+	}
+	public void setDeclaredFriendlyObstructions(String declaredFriendlyObstructions) {
+		this.declaredFriendlyObstructions = declaredFriendlyObstructions;
+	}
 	
 }

@@ -1,35 +1,50 @@
 package com.iab.bootdrools.model;
 
 public class LoadedResult {
-	
-	private String adSessionIdExists;
-	private String impressionTypeExists;
-	private String mediaTypeExists;
-	private String creativeTypeExists;
-	public String getAdSessionIdExists() {
-		return adSessionIdExists;
+
+	private String adSessionId;
+	private String impressionType;
+	private String mediaType;
+	private String creativeType;
+	private String query;
+
+	public String getQuery() {
+		return query;
 	}
-	public void setAdSessionIdExists(String adSessionIdExists) {
-		this.adSessionIdExists = adSessionIdExists;
+
+	public void setQuery(String query) {
+		this.query = query;
 	}
-	public String getImpressionTypeExists() {
-		return impressionTypeExists;
+
+	public String getAdSessionId() {
+		return adSessionId;
 	}
-	public void setImpressionTypeExists(String impressionTypeExists) {
-		this.impressionTypeExists = impressionTypeExists;
+
+	public void setAdSessionId(String adSessionId) {
+		this.adSessionId = adSessionId;
 	}
-	public String getMediaTypeExists() {
-		return mediaTypeExists;
+
+	public String getImpressionType() {
+		return impressionType;
 	}
-	public void setMediaTypeExists(String mediaTypeExists) {
-		this.mediaTypeExists = mediaTypeExists;
+
+	public void setImpressionType(String impressionType) {
+		this.impressionType = impressionType;
 	}
-	public String getCreativeTypeExists() {
-		return creativeTypeExists;
+
+	public String getMediaType() {
+		return mediaType;
 	}
-	public void setCreativeTypeExists(String creativeTypeExists) {
-		this.creativeTypeExists = creativeTypeExists;
+
+	public void setMediaType(String mediaType) {
+		this.mediaType = mediaType;
 	}
-	
-	
+
+	public String getCreativeType() {
+		return creativeType;
+	}
+
+	public void setCreativeType(String creativeType) {
+		this.creativeType = creativeType;
+	}
 }

@@ -2,15 +2,23 @@ package com.iab.bootdrools.model;
 
 public class SessionFinishResult {
 	
-	private String adSessionIdExists;
+	private String adSessionId;
+	private String query;
 
-	public String getAdSessionIdExists() {
-		return adSessionIdExists;
+	public String getQuery() {
+		return query;
 	}
 
-	public void setAdSessionIdExists(String adSessionIdExists) {
-		this.adSessionIdExists = adSessionIdExists;
+	public void setQuery(String query) {
+		this.query = query;
 	}
 
+	public String getAdSessionId() {
+		return adSessionId;
+	}
+
+	public void setAdSessionId(String adSessionId) {
+		this.adSessionId = adSessionId;
+	}
 
 }

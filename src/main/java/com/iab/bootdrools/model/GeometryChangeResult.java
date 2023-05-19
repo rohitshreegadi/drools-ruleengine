@@ -21,6 +21,15 @@ public class GeometryChangeResult {
 	private String onScreenGeometryyExists;
 	private String geometryyExists;
 	private String geometryxExists;
+	private String query;
+
+	public String getQuery() {
+		return query;
+	}
+
+	public void setQuery(String query) {
+		this.query = query;
+	}
 
 //	private String onScreenGeometryfriendlyObstructionsExists;
 	

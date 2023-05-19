@@ -36,7 +36,7 @@ public class JSONParserService {
 	
 	public String jsonFlattenLoaded(String jsonObject) {
 
-		String flattenedJson = JsonFlattener.flatten(jsonObject.toString())
+		String flattenedJson = JsonFlattener.flatten(jsonObject)
 				.replaceAll("data.", "").replace("viewport.", "").replaceAll("adView.", "").replaceAll("data.context.", "").replaceAll("context.", "")
 				.replace("app.", "").replaceAll("omidNativeInfo.", "").replaceAll("omidJsInfo.", "").replace("deviceInfo.", "");
 		JSONObject jsonObj = new JSONObject(flattenedJson);
@@ -53,66 +53,60 @@ public class JSONParserService {
 
 	}
 
-	public Map<String, String> getloadedObject() {
+	public Map<String, Object> getloadedObject() {
 		JsonParser jsonParser;
-		Map<String, String>map= new HashMap<>();
+		Map<String, Object> map = new HashMap<>();
 		String loadedObject = null;
 //		Object loadedObject1 = null;
-		int i=1;
+		int i = 1;
 		try {
 			jsonParser = Json.createParser(new FileInputStream("src/main/resources/Charles.json"));
 			boolean flag = false;
-
 			while (jsonParser.hasNext()) {
 				Event event = jsonParser.next();
 //				System.err.println(i++);
 				switch (event) {
 				case VALUE_STRING:
-				//	System.err.println(flag);
+					// System.err.println(flag);
 					if (!flag) {
 						String input = jsonParser.getString();
-						if(!input.contains("/logapi/logomsdk?")) {
-//					
-						Pattern pattern = Pattern.compile("type=(.*?)&");
-						Matcher matcher = pattern.matcher(input);
-
-						if (matcher.find()) {
-						    String data = matcher.group(1);
-						    System.out.println(data +"################ "); // output: "success"
-						
-						if (jsonParser.getString().contains(data)) {
-							
-							System.err.println();
-							int startIndex = jsonParser.getString().indexOf("rawJSON=");
-							String omsdkJson = URLDecoder.decode(jsonParser.getString().substring(startIndex + 8));
-					//		 System.out.println("String values: " + omsdkJson);
-							loadedObject = jsonFlattenLoaded(omsdkJson);
-							//System.err.println(loadedObject);
-							map.put(data+i++, loadedObject);
-							flag = false;
-							
-						
+						if (!input.contains("/logapi/logomsdk?")) {
+							Pattern pattern = Pattern.compile("type=(.*?)&");
+							Matcher matcher = pattern.matcher(input);
+							if (matcher.find()) {
+								String data = matcher.group(1);
+								System.out.println("data :" + data); // output: "success"
+								if (jsonParser.getString().contains(data)) {
+									System.err.println();
+//									System.out.println("jsonParser.getString() : " + jsonParser.getString());
+									int startIndex = jsonParser.getString().indexOf("rawJSON=");
+									String omsdkJson = URLDecoder
+											.decode(jsonParser.getString().substring(startIndex + 8));
+									// System.out.println("String values: " + omsdkJson);
+									loadedObject = jsonFlattenLoaded(omsdkJson);
+								
+									Map<String, String> map1 = new HashMap<>();
+									map1.put("drool", loadedObject);
+									map1.put("original", jsonParser.getString());
+//									 System.err.println("loadedObject"+loadedObject);
+//									 System.err.println("original"+original);
+									map.put(data + i++, map1);
+									flag = false;
+								}
+							}
 						}
 					}
-					}
-					}
-
-				//	break;
-//
+					// break;
 //				default:
 //					break;
 				}
 			}
-
-			//jsonParser.close();
-
+			// jsonParser.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return map;
-
 	}
 	
 }
