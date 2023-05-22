@@ -29,12 +29,7 @@ public class ImpressionResult {
 	public void setQuery(String query) {
 		this.query = query;
 	}
-	public String getAdSessionId() {
-		return adSessionId;
-	}
-	public void setAdSessionId(String adSessionId) {
-		this.adSessionId = adSessionId;
-	}
+	
 	public String getMediaType() {
 		return mediaType;
 	}
@@ -142,6 +137,14 @@ public class ImpressionResult {
 	}
 	public void setDeclaredFriendlyObstructions(String declaredFriendlyObstructions) {
 		this.declaredFriendlyObstructions = declaredFriendlyObstructions;
+	}
+
+	public String getAdSessionId() {
+		return adSessionId;
+	}
+
+	public void setAdSessionId(String adSessionId) {
+		this.adSessionId = adSessionId;
 	}
 	
 }

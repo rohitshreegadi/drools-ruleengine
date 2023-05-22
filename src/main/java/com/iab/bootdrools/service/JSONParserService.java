@@ -80,7 +80,7 @@ public class JSONParserService {
 									int startIndex = jsonParser.getString().indexOf("rawJSON=");
 									String omsdkJson = URLDecoder
 											.decode(jsonParser.getString().substring(startIndex + 8));
-									// System.out.println("String values: " + omsdkJson);
+									 System.out.println("String values: " + omsdkJson);
 									bannerObject = jsonFlattenBanner(omsdkJson);
 									Map<String, String> nastedMap = new HashMap<>();
 									nastedMap.put("drool", bannerObject);

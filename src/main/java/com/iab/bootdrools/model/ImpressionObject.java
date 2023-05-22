@@ -3,7 +3,7 @@ package com.iab.bootdrools.model;
 public class ImpressionObject {
 
 	private String id;
-	private String adSessionIdImpression;
+	private String adSessionId;
 	private String type;
 	private String mediaType;
 	
@@ -18,20 +18,20 @@ public class ImpressionObject {
 	private String width;
 	private String onScreenGeometryx;
 	private String onScreenGeometryy;
-	private String geometryxImpression;
-	private String geometryyImpression;
-	private String percentageInViewImpression;
+	private String geometryx;
+	private String geometryy;
+	private String percentageInView;
 	private String impressionType;
 	private String timestamp;
 	private String declaredFriendlyObstructions;
 	private String onScreenGeometryPixels;
-	public ImpressionObject(String adSessionIdImpression, String type, String mediaType, 
+	public ImpressionObject(String adSessionId, String type, String mediaType, 
 			String onScreenGeometryheight, String onScreenGeometrywidth, String pixelsInView, String creativeType,
 			String geometrywidth, String geometryheight, String geometrypixels, String height, String width,
-			String onScreenGeometryx, String onScreenGeometryy, String geometryxImpression, String geometryyImpression,
-			String percentageInViewImpression, String impressionType, String timestamp, String declaredFriendlyObstructions,String onScreenGeometryPixels) {
+			String onScreenGeometryx, String onScreenGeometryy, String geometryx, String geometryy,
+			String percentageInView, String impressionType, String timestamp, String declaredFriendlyObstructions,String onScreenGeometryPixels) {
 		super();
-		this.adSessionIdImpression = adSessionIdImpression;
+		this.adSessionId = adSessionId;
 		this.type = type;
 		this.mediaType = mediaType;
 		this.onScreenGeometryheight = onScreenGeometryheight;
@@ -45,9 +45,9 @@ public class ImpressionObject {
 		this.width = width;
 		this.onScreenGeometryx = onScreenGeometryx;
 		this.onScreenGeometryy = onScreenGeometryy;
-		this.geometryxImpression = geometryxImpression;
-		this.geometryyImpression = geometryyImpression;
-		this.percentageInViewImpression = percentageInViewImpression;
+		this.geometryx = geometryx;
+		this.geometryy = geometryy;
+		this.percentageInView = percentageInView;
 		this.impressionType = impressionType;
 		this.timestamp = timestamp;
 		this.declaredFriendlyObstructions = declaredFriendlyObstructions;
@@ -164,28 +164,32 @@ public class ImpressionObject {
 	public void setOnScreenGeometryPixels(String onScreenGeometryPixels) {
 		this.onScreenGeometryPixels = onScreenGeometryPixels;
 	}
-	public String getAdSessionIdImpression() {
-		return adSessionIdImpression;
+
+	public String getAdSessionId() {
+		return adSessionId;
 	}
-	public void setAdSessionIdImpression(String adSessionIdImpression) {
-		this.adSessionIdImpression = adSessionIdImpression;
+	public void setAdSessionId(String adSessionId) {
+		this.adSessionId = adSessionId;
 	}
-	public String getGeometryxImpression() {
-		return geometryxImpression;
+	
+	public String getGeometryx() {
+		return geometryx;
 	}
-	public void setGeometryxImpression(String geometryxImpression) {
-		this.geometryxImpression = geometryxImpression;
+	public void setGeometryx(String geometryx) {
+		this.geometryx = geometryx;
 	}
-	public String getGeometryyImpression() {
-		return geometryyImpression;
+	
+	public String getGeometryy() {
+		return geometryy;
 	}
-	public void setGeometryyImpression(String geometryyImpression) {
-		this.geometryyImpression = geometryyImpression;
+	public void setGeometryy(String geometryy) {
+		this.geometryy = geometryy;
 	}
-	public String getPercentageInViewImpression() {
-		return percentageInViewImpression;
+	public String getPercentageInView() {
+		return percentageInView;
 	}
-	public void setPercentageInViewImpression(String percentageInViewImpression) {
-		this.percentageInViewImpression = percentageInViewImpression;
-	}		
+	public void setPercentageInView(String percentageInView) {
+		this.percentageInView = percentageInView;
+	}
+	
 }
