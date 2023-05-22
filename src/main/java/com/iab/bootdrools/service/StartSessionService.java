@@ -30,15 +30,14 @@ public class StartSessionService {
 	@Autowired
     private KieContainer kieContainer;
 	
-	public SessionStartResult getSessionStartResults(Object Object1) {   
+	public SessionStartResult getSessionStartResults(Object sessionStartObject) {   
 		
 		SessionStartResult sessionStartResult = new SessionStartResult();
 		KieSession kieSession = kieContainer.newKieSession();
 		kieSession.setGlobal("sessionStartResult", sessionStartResult);
-		kieSession.insert(Object1);
+		kieSession.insert(sessionStartObject);
 		kieSession.fireAllRules();
 		kieSession.dispose();
-		System.err.println(sessionStartResult);
 		return sessionStartResult;
 	}
 	
@@ -52,50 +51,45 @@ public class StartSessionService {
         return geometryChangeResult;
     }
 
-	public Object getLoaded() {
-		Map<String, Object> loadedObject = jsonParserService.getloadedObject();
-//		List<Object> list = new ArrayList<>();
+	public Object getBanner() {
+		Map<String, Object> bannerObject = jsonParserService.getBannerObject();
 		Map<String, Object> map=  new HashMap<>(); 
-		//LoadedResult loadedResult = new LoadedResult();
-		for (String key : loadedObject.keySet()) {
-		    Map<String , String> getvalue = (Map<String, String>) loadedObject.get(key);
+		for (String key : bannerObject.keySet()) {
+		    Map<String , String> getvalue = (Map<String, String>) bannerObject.get(key);
 		   String value = getvalue.get("drool");
 		   String query = getvalue.get("original");
 		    String keys = key.replaceAll("\\d", "");
 		switch (keys) {
 		case "loaded":
 			Gson g = new Gson();
-			LoadedObject	Object1 = g.fromJson(value, LoadedObject.class);
-			LoadedResult result=	getloadedTest(Object1);
-			result.setQuery(query);
+			LoadedObject	loaded = g.fromJson(value, LoadedObject.class);
+			LoadedResult loadedResult=	getloadedTest(loaded);
+			loadedResult.setQuery(query);
 //			list.add(result);
-			map.put(key, result);
+			map.put(key, loadedResult);
 			
 			break;
 
 		case "sessionFinish":
-			Gson g1 = new Gson();
-			SessionFinishObject	Object11 = g1.fromJson(value, SessionFinishObject.class);
-			SessionFinishResult result1=	getSessionFinish(Object11);
-//			list.add(result1);
-			result1.setQuery(query);
-			map.put(key, result1);
+			Gson sessionFinish = new Gson();
+			SessionFinishObject	sessionFinishObject = sessionFinish.fromJson(value, SessionFinishObject.class);
+			SessionFinishResult sessionFinishresult=	getSessionFinish(sessionFinishObject);
+			sessionFinishresult.setQuery(query);
+			map.put(key, sessionFinishresult);
 			break;
 		
 		case "sessionStart":
-			Gson g11 = new Gson();
-			SessionStartObject	Object111 = g11.fromJson(value, SessionStartObject.class);
-			SessionStartResult result11=	getSessionStartResults(Object111);
-//			list.add(result1);
-			result11.setQuery(query);
-			map.put(key, result11);
+			Gson sessionStart = new Gson();
+			SessionStartObject	sessionStartObject = sessionStart.fromJson(value, SessionStartObject.class);
+			SessionStartResult sessionStartresult=	getSessionStartResults(sessionStartObject);
+			sessionStartresult.setQuery(query);
+			map.put(key, sessionStartresult);
 			break;	
 			
 		case "geometryChange":
 			Gson geometry = new Gson();
 			GeometryChangeObject	geometryObj = geometry.fromJson(value, GeometryChangeObject.class);
 			GeometryChangeResult geometryresult=	getGeometryChange(geometryObj);
-//			list.add(result1);
 			geometryresult.setQuery(query);
 			map.put(key, geometryresult);
 			break;		
@@ -104,7 +98,6 @@ public class StartSessionService {
 			Gson impression = new Gson();
 			ImpressionObject	impressionObj = impression.fromJson(value, ImpressionObject.class);
 			ImpressionResult impressionresult=	getImpression(impressionObj);
-//			list.add(result1);
 			impressionresult.setQuery(query);
 			map.put(key, impressionresult);
 			break;		
@@ -135,7 +128,6 @@ public class StartSessionService {
 		kieSession.insert(sessionFinishObject);
 		kieSession.fireAllRules();
 		kieSession.dispose();
-		System.err.println(sessionFinishResult);
 		return sessionFinishResult;
 	}
 	
@@ -146,7 +138,6 @@ public class StartSessionService {
 		kieSession.insert(sessionFinishObject);
 		kieSession.fireAllRules();
 		kieSession.dispose();
-		System.err.println(sessionFinishResult);
 		return sessionFinishResult;
 	}
 

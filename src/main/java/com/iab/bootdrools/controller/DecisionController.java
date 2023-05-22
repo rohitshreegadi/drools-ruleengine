@@ -15,11 +15,11 @@ import com.iab.bootdrools.service.JSONParserService;
 @RestController
 public class DecisionController {
 
-	@Autowired
-	private KieContainer kieContainer;
-
-	@Autowired
-	private JSONParserService jsonParserService; 
+//	@Autowired
+//	private KieContainer kieContainer;
+//
+//	@Autowired
+//	private JSONParserService jsonParserService; 
 	
 //	@RequestMapping(value = "/getInterestRate", method = RequestMethod.GET, produces = "application/json")
 //	public String getInterest(@RequestParam(required = true) String loanType,
@@ -32,15 +32,15 @@ public class DecisionController {
 //		return "The interest rate for this application is " + depositRequest.getInterestRate();
 //	}
 	
-	@RequestMapping(value = "/testSessionStarted", method = RequestMethod.GET, produces = "application/json")
-	public String getComplainceTest() {
-		KieSession kieSession = kieContainer.newKieSession();
-	//	DepositRequest depositRequest = new DepositRequest(adSessionId);
-		// SessionStartObject sessionObject = new SessionStartObject(adSessionId,type,timestamp);
-		SessionStartObject sessionObject= jsonParserService.getSessionObject();
-		kieSession.insert(sessionObject);
-		kieSession.fireAllRules();
-		kieSession.dispose();
-		return "sessionStart: AdSessionId " + sessionObject.getAdSessionIdExists() ;
-	}
+//	@RequestMapping(value = "/testSessionStarted", method = RequestMethod.GET, produces = "application/json")
+//	public String getComplainceTest() {
+//		KieSession kieSession = kieContainer.newKieSession();
+//	//	DepositRequest depositRequest = new DepositRequest(adSessionId);
+//		// SessionStartObject sessionObject = new SessionStartObject(adSessionId,type,timestamp);
+//		SessionStartObject sessionObject= jsonParserService.getSessionObject();
+//		kieSession.insert(sessionObject);
+//		kieSession.fireAllRules();
+//		kieSession.dispose();
+//		return "sessionStart: AdSessionId " + sessionObject.getAdSessionIdExists() ;
+//	}
 }

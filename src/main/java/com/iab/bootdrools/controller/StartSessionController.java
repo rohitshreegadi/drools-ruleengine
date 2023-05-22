@@ -15,9 +15,9 @@ public class StartSessionController {
 	private StartSessionService startSessionService;
 
 
-	@GetMapping("/getLoadedResult")
-	public ResponseEntity<Object> getLoadedResult() {
-		Object results = startSessionService.getLoaded();
+	@GetMapping("/getBannerResult")
+	public ResponseEntity<Object> getBannerResult() {
+		Object results = startSessionService.getBanner();
 		return new ResponseEntity<>(results, HttpStatus.OK);
 	}
 	

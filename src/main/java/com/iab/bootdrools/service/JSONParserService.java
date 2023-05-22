@@ -34,7 +34,7 @@ import com.iab.bootdrools.model.ImpressionObject;
 @Service
 public class JSONParserService {
 	
-	public String jsonFlattenLoaded(String jsonObject) {
+	public String jsonFlattenBanner(String jsonObject) {
 
 		String flattenedJson = JsonFlattener.flatten(jsonObject)
 				.replaceAll("data.", "").replace("viewport.", "").replaceAll("adView.", "").replaceAll("data.context.", "").replaceAll("context.", "")
@@ -53,10 +53,10 @@ public class JSONParserService {
 
 	}
 
-	public Map<String, Object> getloadedObject() {
+	public Map<String, Object> getBannerObject() {
 		JsonParser jsonParser;
 		Map<String, Object> map = new HashMap<>();
-		String loadedObject = null;
+		String bannerObject = null;
 //		Object loadedObject1 = null;
 		int i = 1;
 		try {
@@ -77,20 +77,16 @@ public class JSONParserService {
 								String data = matcher.group(1);
 								System.out.println("data :" + data); // output: "success"
 								if (jsonParser.getString().contains(data)) {
-									System.err.println();
-//									System.out.println("jsonParser.getString() : " + jsonParser.getString());
 									int startIndex = jsonParser.getString().indexOf("rawJSON=");
 									String omsdkJson = URLDecoder
 											.decode(jsonParser.getString().substring(startIndex + 8));
 									// System.out.println("String values: " + omsdkJson);
-									loadedObject = jsonFlattenLoaded(omsdkJson);
-								
-									Map<String, String> map1 = new HashMap<>();
-									map1.put("drool", loadedObject);
-									map1.put("original", jsonParser.getString());
-//									 System.err.println("loadedObject"+loadedObject);
-//									 System.err.println("original"+original);
-									map.put(data + i++, map1);
+									bannerObject = jsonFlattenBanner(omsdkJson);
+									System.err.println(startIndex);
+									Map<String, String> nastedMap = new HashMap<>();
+									nastedMap.put("drool", bannerObject);
+									nastedMap.put("original", jsonParser.getString());
+									map.put(data + i++, nastedMap);
 									flag = false;
 								}
 							}

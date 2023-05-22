@@ -15,21 +15,11 @@ public class DroolsConfiguration {
 //	@Autowired DownloadServiceImpl downloadServiceImpl;
 	private final KieServices kieServices = KieServices.Factory.get();
 
-//	@Bean
-//	public KieContainer kieContainer() {
-//		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-//		kieFileSystem.write(ResourceFactory.newClassPathResource("complaince_rules.xlsx"));
-//		
-//		KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
-//		kb.buildAll();
-//		KieModule kieModule = kb.getKieModule();
-//		return kieServices.newKieContainer(kieModule.getReleaseId());
-//	}
-//	
+
 	@Bean
 	public KieContainer kieContainer() {
 		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-		kieFileSystem.write(ResourceFactory.newClassPathResource("nikhil.xlsx"));
+		kieFileSystem.write(ResourceFactory.newClassPathResource("complaince_rules_banner.xlsx"));
 		
 		KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
 		kb.buildAll();
