@@ -82,7 +82,6 @@ public class JSONParserService {
 											.decode(jsonParser.getString().substring(startIndex + 8));
 									// System.out.println("String values: " + omsdkJson);
 									bannerObject = jsonFlattenBanner(omsdkJson);
-									System.err.println(startIndex);
 									Map<String, String> nastedMap = new HashMap<>();
 									nastedMap.put("drool", bannerObject);
 									nastedMap.put("original", jsonParser.getString());
