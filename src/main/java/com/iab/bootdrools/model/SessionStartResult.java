@@ -30,7 +30,25 @@ public class SessionStartResult {
 	private String osVersion;
 	private String os;
 	private String impressionType;
-	private String query;
+	private String eventType;
+	private QueryData queryData;
+	
+	public QueryData getQueryData() {
+		return queryData;
+	}
+
+	public void setQueryData(QueryData queryData) {
+		this.queryData = queryData;
+	}
+
+	public String getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
+	}
+	
 	public String getAdSessionId() {
 		return adSessionId;
 	}
@@ -176,12 +194,5 @@ public class SessionStartResult {
 	public void setImpressionType(String impressionType) {
 		this.impressionType = impressionType;
 	}
-	public String getQuery() {
-		return query;
-	}
-	public void setQuery(String query) {
-		this.query = query;
-	}
-
 	
 	}

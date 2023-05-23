@@ -1,6 +1,9 @@
 package com.iab.bootdrools.service;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.kie.api.runtime.KieContainer;
@@ -15,6 +18,7 @@ import com.iab.bootdrools.model.ImpressionObject;
 import com.iab.bootdrools.model.ImpressionResult;
 import com.iab.bootdrools.model.LoadedObject;
 import com.iab.bootdrools.model.LoadedResult;
+import com.iab.bootdrools.model.QueryData;
 import com.iab.bootdrools.model.SessionFinishObject;
 import com.iab.bootdrools.model.SessionFinishResult;
 import com.iab.bootdrools.model.SessionStartObject;
@@ -51,22 +55,28 @@ public class StartSessionService {
         return geometryChangeResult;
     }
 
-	public Object getBanner() {
-		Map<String, Object> bannerObject = jsonParserService.getBannerObject();
-		Map<String, Object> map=  new HashMap<>(); 
+	public List<Object> getBanner(File convertedFile) {
+		Map<String, Object> bannerObject = jsonParserService.getBannerObject(convertedFile);
+//		Map<String, Object> map=  new HashMap<>(); 
+		List<Object> list = new ArrayList<>();
 		for (String key : bannerObject.keySet()) {
 		    Map<String , String> getvalue = (Map<String, String>) bannerObject.get(key);
 		   String value = getvalue.get("drool");
 		   String query = getvalue.get("original");
 		    String keys = key.replaceAll("\\d", "");
+		    QueryData queryData= new QueryData();
+		    queryData.setQuery(query);
+		   
 		switch (keys) {
 		case "loaded":
 			Gson g = new Gson();
 			LoadedObject	loaded = g.fromJson(value, LoadedObject.class);
 			LoadedResult loadedResult=	getloadedTest(loaded);
-			loadedResult.setQuery(query);
+			loadedResult.setQueryData(queryData);
+			loadedResult.setEventType(keys);
+			list.add(loadedResult);
 //			list.add(result);
-			map.put(key, loadedResult);
+//			map.put(key, loadedResult);
 			
 			break;
 
@@ -74,39 +84,49 @@ public class StartSessionService {
 			Gson sessionFinish = new Gson();
 			SessionFinishObject	sessionFinishObject = sessionFinish.fromJson(value, SessionFinishObject.class);
 			SessionFinishResult sessionFinishresult=	getSessionFinish(sessionFinishObject);
-			sessionFinishresult.setQuery(query);
-			map.put(key, sessionFinishresult);
+			sessionFinishresult.setQueryData(queryData);
+			sessionFinishresult.setEventType(keys);
+			list.add(sessionFinishresult);
+//			map.put(key, sessionFinishresult);
+			
 			break;
 		
 		case "sessionStart":
 			Gson sessionStart = new Gson();
 			SessionStartObject	sessionStartObject = sessionStart.fromJson(value, SessionStartObject.class);
 			SessionStartResult sessionStartresult=	getSessionStartResults(sessionStartObject);
-			sessionStartresult.setQuery(query);
-			map.put(key, sessionStartresult);
+			sessionStartresult.setQueryData(queryData);
+			sessionStartresult.setEventType(keys);
+			list.add(sessionStartresult);
+//			map.put(key, sessionStartresult);
 			break;	
 			
 		case "geometryChange":
 			Gson geometry = new Gson();
 			GeometryChangeObject	geometryObj = geometry.fromJson(value, GeometryChangeObject.class);
 			GeometryChangeResult geometryresult=	getGeometryChange(geometryObj);
-			geometryresult.setQuery(query);
-			map.put(key, geometryresult);
+			geometryresult.setQueryData(queryData);
+			geometryresult.setEventType(keys);
+			list.add(geometryresult);
+//			map.put(key, geometryresult);
 			break;		
 			
 		case "impression":
 			Gson impression = new Gson();
 			ImpressionObject	impressionObj = impression.fromJson(value, ImpressionObject.class);
 			ImpressionResult impressionresult=	getImpression(impressionObj);
-			impressionresult.setQuery(query);
-			map.put(key, impressionresult);
+			impressionresult.setQueryData(queryData);
+			impressionresult.setEventType(keys);
+			System.err.println(value);
+			list.add(impressionresult);
+//			map.put(key, impressionresult);
 			break;		
 		default:
 			break;
 		}
 
 		}
-		return map;
+		return list;
 		
 	}
 	

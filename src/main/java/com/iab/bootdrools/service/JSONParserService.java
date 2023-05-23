@@ -1,5 +1,6 @@
 package com.iab.bootdrools.service;
 
+import java.io.File;
 //import java.io.FileInputStream;
 //import java.io.FileNotFoundException;
 //import java.net.URLDecoder;
@@ -30,6 +31,7 @@ import org.springframework.stereotype.Service;
 import com.github.wnameless.json.flattener.JsonFlattener;
 import com.google.gson.Gson;
 import com.iab.bootdrools.model.ImpressionObject;
+import com.iab.bootdrools.model.QueryData;
 
 @Service
 public class JSONParserService {
@@ -53,14 +55,15 @@ public class JSONParserService {
 
 	}
 
-	public Map<String, Object> getBannerObject() {
+	public Map<String, Object> getBannerObject(File convertedFile) {
 		JsonParser jsonParser;
 		Map<String, Object> map = new HashMap<>();
 		String bannerObject = null;
 //		Object loadedObject1 = null;
 		int i = 1;
 		try {
-			jsonParser = Json.createParser(new FileInputStream("src/main/resources/Charles.json"));
+//			jsonParser = Json.createParser(new FileInputStream("src/main/resources/Charles.json"));
+			jsonParser = Json.createParser(new FileInputStream(convertedFile));
 			boolean flag = false;
 			while (jsonParser.hasNext()) {
 				Event event = jsonParser.next();
@@ -77,14 +80,22 @@ public class JSONParserService {
 								String data = matcher.group(1);
 								System.out.println("data :" + data); // output: "success"
 								if (jsonParser.getString().contains(data)) {
+									
 									int startIndex = jsonParser.getString().indexOf("rawJSON=");
+									int startIndexQuery = jsonParser.getString().indexOf("&rawJSON=");
+								
 									String omsdkJson = URLDecoder
 											.decode(jsonParser.getString().substring(startIndex + 8));
+
+									String query = URLDecoder
+											.decode(jsonParser.getString().substring(0, startIndexQuery).concat(omsdkJson));
 									 System.out.println("String values: " + omsdkJson);
 									bannerObject = jsonFlattenBanner(omsdkJson);
+									System.err.println(bannerObject);
+									
 									Map<String, String> nastedMap = new HashMap<>();
 									nastedMap.put("drool", bannerObject);
-									nastedMap.put("original", jsonParser.getString());
+									nastedMap.put("original", query);
 									map.put(data + i++, nastedMap);
 									flag = false;
 								}

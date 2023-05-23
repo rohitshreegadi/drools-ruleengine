@@ -20,15 +20,25 @@ public class ImpressionResult {
 	private String impressionType;
 	private String onScreenGeometryPixels;
 	private String declaredFriendlyObstructions;
-	private String query;
-
-	public String getQuery() {
-		return query;
+	private String eventType;
+	private QueryData queryData;
+	
+	public QueryData getQueryData() {
+		return queryData;
 	}
 
-	public void setQuery(String query) {
-		this.query = query;
+	public void setQueryData(QueryData queryData) {
+		this.queryData = queryData;
 	}
+
+	public String getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
+	}
+	
 	
 	public String getMediaType() {
 		return mediaType;

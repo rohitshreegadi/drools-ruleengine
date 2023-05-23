@@ -21,7 +21,25 @@ public class GeometryChangeResult {
 	private String onScreenGeometryy;
 	private String geometryy;
 	private String geometryx;
-	private String query;
+	private String eventType;
+	private QueryData queryData;
+	
+	public QueryData getQueryData() {
+		return queryData;
+	}
+
+	public void setQueryData(QueryData queryData) {
+		this.queryData = queryData;
+	}
+
+	public String getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
+	}
+	
 	public String getAdSessionId() {
 		return adSessionId;
 	}
@@ -111,12 +129,6 @@ public class GeometryChangeResult {
 	}
 	public void setGeometryx(String geometryx) {
 		this.geometryx = geometryx;
-	}
-	public String getQuery() {
-		return query;
-	}
-	public void setQuery(String query) {
-		this.query = query;
 	}
 
 	
