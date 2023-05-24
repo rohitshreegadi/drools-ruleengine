@@ -31,29 +31,11 @@ public class StartSessionController {
 //		return new ResponseEntity<>(results, HttpStatus.OK);
 //	}
 	
-	@PostMapping("/upload")
-	public List<Object> handleFileUpload(@RequestParam("file") MultipartFile file) throws IllegalArgumentException, IllegalAccessException {
-	    try {
-	        File convertedFile = convertMultiPartToFile(file);
-	        FileInputStream fileInputStream = new FileInputStream(convertedFile);
-	        List<Object> results =    startSessionService.getBanner(convertedFile);
-	        // Process the file using FileInputStream
-	        // ...
-
-	        fileInputStream.close();
-	        convertedFile.delete(); // Clean up the temporary file
-	        return results;
-	    } catch (IOException e) {
-	        return null;
-	    }
+	@PostMapping("/fileUpload")
+	public ResponseEntity<List<Object>> getBannerResult(@RequestParam("file") MultipartFile file) throws IOException  {
+	    List<Object> results =    startSessionService.getBanner(file);
+	    return new ResponseEntity<>(results, HttpStatus.OK);
 	}
 
-	private File convertMultiPartToFile(MultipartFile file) throws IOException {
-	    File convertedFile = new File(file.getOriginalFilename());
-	    try (OutputStream outputStream = new FileOutputStream(convertedFile)) {
-	        outputStream.write(file.getBytes());
-	    }
-	    return convertedFile;
-	}
 
 }

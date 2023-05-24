@@ -15,6 +15,9 @@ import java.io.File;
 //import com.google.gson.JsonParser;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,6 +30,7 @@ import javax.json.stream.JsonParser.Event;
 
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.github.wnameless.json.flattener.JsonFlattener;
 import com.google.gson.Gson;
@@ -55,15 +59,19 @@ public class JSONParserService {
 
 	}
 
-	public Map<String, Object> getBannerObject(File convertedFile) {
+	public Map<String, Object> getBannerObject(MultipartFile fileInputStream) {
+		
+		 
 		JsonParser jsonParser;
 		Map<String, Object> map = new HashMap<>();
 		String bannerObject = null;
 //		Object loadedObject1 = null;
 		int i = 1;
 		try {
+			File convertedFile = convertMultiPartToFile(fileInputStream);
+	        FileInputStream file = new FileInputStream(convertedFile);
 //			jsonParser = Json.createParser(new FileInputStream("src/main/resources/Charles.json"));
-			jsonParser = Json.createParser(new FileInputStream(convertedFile));
+			jsonParser = Json.createParser(file);
 			boolean flag = false;
 			while (jsonParser.hasNext()) {
 				Event event = jsonParser.next();
@@ -88,7 +96,7 @@ public class JSONParserService {
 											.decode(jsonParser.getString().substring(startIndex + 8));
 
 									String query = URLDecoder
-											.decode(jsonParser.getString().substring(0, startIndexQuery).concat(omsdkJson));
+											.decode(jsonParser.getString().substring(0, startIndexQuery).concat("&rawJSON=").concat(omsdkJson));
 									 System.out.println("String values: " + omsdkJson);
 									bannerObject = jsonFlattenBanner(omsdkJson);
 									System.err.println(bannerObject);
@@ -108,11 +116,20 @@ public class JSONParserService {
 				}
 			}
 			// jsonParser.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+//			file.close();
+//			  convertedFile.delete(); // Clean up the temporary file
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return map;
+	}
+	
+	private File convertMultiPartToFile(MultipartFile file) throws IOException {
+	    File convertedFile = new File(file.getOriginalFilename());
+	    try (OutputStream outputStream = new FileOutputStream(convertedFile)) {
+	        outputStream.write(file.getBytes());
+	    }
+	    return convertedFile;
 	}
 	
 }

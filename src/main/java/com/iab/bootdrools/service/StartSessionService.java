@@ -1,8 +1,7 @@
 package com.iab.bootdrools.service;
 
-import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +9,7 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
 import com.iab.bootdrools.model.GeometryChangeObject;
@@ -55,7 +55,7 @@ public class StartSessionService {
         return geometryChangeResult;
     }
 
-	public List<Object> getBanner(File convertedFile) {
+	public List<Object> getBanner(MultipartFile convertedFile) throws IOException {
 		Map<String, Object> bannerObject = jsonParserService.getBannerObject(convertedFile);
 //		Map<String, Object> map=  new HashMap<>(); 
 		List<Object> list = new ArrayList<>();
@@ -75,8 +75,6 @@ public class StartSessionService {
 			loadedResult.setQueryData(queryData);
 			loadedResult.setEventType(keys);
 			list.add(loadedResult);
-//			list.add(result);
-//			map.put(key, loadedResult);
 			
 			break;
 
@@ -87,7 +85,6 @@ public class StartSessionService {
 			sessionFinishresult.setQueryData(queryData);
 			sessionFinishresult.setEventType(keys);
 			list.add(sessionFinishresult);
-//			map.put(key, sessionFinishresult);
 			
 			break;
 		
@@ -98,7 +95,6 @@ public class StartSessionService {
 			sessionStartresult.setQueryData(queryData);
 			sessionStartresult.setEventType(keys);
 			list.add(sessionStartresult);
-//			map.put(key, sessionStartresult);
 			break;	
 			
 		case "geometryChange":
@@ -108,7 +104,6 @@ public class StartSessionService {
 			geometryresult.setQueryData(queryData);
 			geometryresult.setEventType(keys);
 			list.add(geometryresult);
-//			map.put(key, geometryresult);
 			break;		
 			
 		case "impression":
@@ -117,9 +112,7 @@ public class StartSessionService {
 			ImpressionResult impressionresult=	getImpression(impressionObj);
 			impressionresult.setQueryData(queryData);
 			impressionresult.setEventType(keys);
-			System.err.println(value);
 			list.add(impressionresult);
-//			map.put(key, impressionresult);
 			break;		
 		default:
 			break;
