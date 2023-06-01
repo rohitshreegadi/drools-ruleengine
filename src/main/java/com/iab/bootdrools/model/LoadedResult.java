@@ -7,6 +7,7 @@ public class LoadedResult {
 	private String mediaType;
 	private String creativeType;
 	private String eventType;
+	private String timestamp;
 	private QueryData queryData;
 	
 	public QueryData getQueryData() {
@@ -57,4 +58,13 @@ public class LoadedResult {
 	public void setCreativeType(String creativeType) {
 		this.creativeType = creativeType;
 	}
+
+	public String getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
+	
 }

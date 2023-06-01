@@ -8,13 +8,15 @@ public class LoadedObject {
 	private String mediaType;
 	private String impressionType;
 	private String adSessionId;
-	public LoadedObject(String type, String creativeType, String mediaType, String impressionType,String adSessionId) {
+	private String timestamp;
+	public LoadedObject(String type, String creativeType, String mediaType, String impressionType,String adSessionId,String timestamp) {
 		super();
 		this.type = type;
 		this.creativeType = creativeType;
 		this.mediaType = mediaType;
 		this.impressionType = impressionType;
 		this.adSessionId = adSessionId;
+		this.timestamp = timestamp;
 	}
 	public String getId() {
 		return id;
@@ -52,6 +54,10 @@ public class LoadedObject {
 	public void setAdSessionId(String adSessionId) {
 		this.adSessionId = adSessionId;
 	}
-	
-	
+	public String getTimestamp() {
+		return timestamp;
+	}
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
 }

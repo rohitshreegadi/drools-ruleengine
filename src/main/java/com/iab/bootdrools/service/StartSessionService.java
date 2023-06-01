@@ -1,7 +1,9 @@
 package com.iab.bootdrools.service;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.iab.bootdrools.model.GeometryChangeObject;
 import com.iab.bootdrools.model.GeometryChangeResult;
@@ -57,63 +60,87 @@ public class StartSessionService {
 
 	public List<Object> getBanner(MultipartFile convertedFile) throws IOException {
 		Map<String, Object> bannerObject = jsonParserService.getBannerObject(convertedFile);
-//		Map<String, Object> map=  new HashMap<>(); 
 		List<Object> list = new ArrayList<>();
 		for (String key : bannerObject.keySet()) {
-		    Map<String , String> getvalue = (Map<String, String>) bannerObject.get(key);
+		   Map<String , String> getvalue = (Map<String, String>) bannerObject.get(key);
 		   String value = getvalue.get("drool");
 		   String query = getvalue.get("original");
 		    String keys = key.replaceAll("\\d", "");
-		    QueryData queryData= new QueryData();
-		    queryData.setQuery(query);
 		   
 		switch (keys) {
 		case "loaded":
 			Gson g = new Gson();
 			LoadedObject	loaded = g.fromJson(value, LoadedObject.class);
 			LoadedResult loadedResult=	getloadedTest(loaded);
+			ObjectMapper om = new ObjectMapper();
+			List<String> keyName = new ArrayList<>();
+			int i = 0;
+			long milliseconds = Long.parseLong(loaded.getTimestamp());
+	    	Timestamp ts = new Timestamp(milliseconds);
+			//System.err.println("*******"+loaded.getTimestamp());
+			
+			Map<String,String> map = (Map<String, String>) om.convertValue(loadedResult, Map.class);
+			  for (String mainkey: map.keySet()) {
+		            if("doesntexists".equalsIgnoreCase(map.get(mainkey))) {
+		            	i++;
+		            	keyName.add(mainkey);
+		            }
+		        }
+			  Map<String,String> newcheck = new HashMap<>();
+			  ObjectMapper om1 = new ObjectMapper();
+			  Map<String,String> map1 = (Map<String, String>) om1.convertValue(loaded, Map.class);
+			  for (String mainkey: map1.keySet()) {
+		            if(keyName.contains(mainkey)) {
+		            	newcheck.put(mainkey, map1.get(mainkey));
+		            }
+			  }   
+			  QueryData queryData= new QueryData();
+			    queryData.setQuery(query);
+			    queryData.setCount(i);
+			    queryData.setErrorMessage(newcheck);
 			loadedResult.setQueryData(queryData);
 			loadedResult.setEventType(keys);
+			loadedResult.setTimestamp(ts.toString());
 			list.add(loadedResult);
 			
 			break;
-
-		case "sessionFinish":
-			Gson sessionFinish = new Gson();
-			SessionFinishObject	sessionFinishObject = sessionFinish.fromJson(value, SessionFinishObject.class);
-			SessionFinishResult sessionFinishresult=	getSessionFinish(sessionFinishObject);
-			sessionFinishresult.setQueryData(queryData);
-			sessionFinishresult.setEventType(keys);
-			list.add(sessionFinishresult);
+//
+//		case "sessionFinish":
+//			Gson sessionFinish = new Gson();
+//			SessionFinishObject	sessionFinishObject = sessionFinish.fromJson(value, SessionFinishObject.class);
+//			SessionFinishResult sessionFinishresult=	getSessionFinish(sessionFinishObject);
+//			sessionFinishresult.setQueryData(queryData);
+//			sessionFinishresult.setEventType(keys);
+//			list.add(sessionFinishresult);
+//			
+//			break;
+//		
+//		case "sessionStart":
+//			Gson sessionStart = new Gson();
+//			SessionStartObject	sessionStartObject = sessionStart.fromJson(value, SessionStartObject.class);
+//			SessionStartResult sessionStartresult=	getSessionStartResults(sessionStartObject);
+//			sessionStartresult.setQueryData(queryData);
+//			sessionStartresult.setEventType(keys);
+//			list.add(sessionStartresult);
+//			break;	
+//			
+//		case "geometryChange":
+//			Gson geometry = new Gson();
+//			GeometryChangeObject	geometryObj = geometry.fromJson(value, GeometryChangeObject.class);
+//			GeometryChangeResult geometryresult=	getGeometryChange(geometryObj);
+//			geometryresult.setQueryData(queryData);
+//			geometryresult.setEventType(keys);
+//			list.add(geometryresult);
+//			break;		
 			
-			break;
-		
-		case "sessionStart":
-			Gson sessionStart = new Gson();
-			SessionStartObject	sessionStartObject = sessionStart.fromJson(value, SessionStartObject.class);
-			SessionStartResult sessionStartresult=	getSessionStartResults(sessionStartObject);
-			sessionStartresult.setQueryData(queryData);
-			sessionStartresult.setEventType(keys);
-			list.add(sessionStartresult);
-			break;	
-			
-		case "geometryChange":
-			Gson geometry = new Gson();
-			GeometryChangeObject	geometryObj = geometry.fromJson(value, GeometryChangeObject.class);
-			GeometryChangeResult geometryresult=	getGeometryChange(geometryObj);
-			geometryresult.setQueryData(queryData);
-			geometryresult.setEventType(keys);
-			list.add(geometryresult);
-			break;		
-			
-		case "impression":
-			Gson impression = new Gson();
-			ImpressionObject	impressionObj = impression.fromJson(value, ImpressionObject.class);
-			ImpressionResult impressionresult=	getImpression(impressionObj);
-			impressionresult.setQueryData(queryData);
-			impressionresult.setEventType(keys);
-			list.add(impressionresult);
-			break;		
+//		case "impression":
+//			Gson impression = new Gson();
+//			ImpressionObject	impressionObj = impression.fromJson(value, ImpressionObject.class);
+//			ImpressionResult impressionresult=	getImpression(impressionObj);
+//			impressionresult.setQueryData(queryData);
+//			impressionresult.setEventType(keys);
+//			list.add(impressionresult);
+//			break;		
 		default:
 			break;
 		}
