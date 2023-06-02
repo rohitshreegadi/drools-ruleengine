@@ -23,7 +23,16 @@ public class GeometryChangeResult {
 	private String geometryx;
 	private String eventType;
 	private QueryData queryData;
+	private String timestamp;
 	
+	public String getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
+
 	public QueryData getQueryData() {
 		return queryData;
 	}
