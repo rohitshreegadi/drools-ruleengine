@@ -19,7 +19,7 @@ public class DroolsConfiguration {
 	@Bean
 	public KieContainer kieContainer() {
 		KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-		kieFileSystem.write(ResourceFactory.newClassPathResource("complaince_rules_banner.xlsx"));
+		kieFileSystem.write(ResourceFactory.newClassPathResource("complaince_rules_Interstitial.xlsx"));
 		
 		KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
 		kb.buildAll();

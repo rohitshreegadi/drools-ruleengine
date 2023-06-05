@@ -33,7 +33,17 @@ public class SessionStartResult {
 	private String eventType;
 	private QueryData queryData;
 	private String timestamp;
+	private AdSessionDetails adSessionDetails;
 	
+	
+	public AdSessionDetails getAdSessionDetails() {
+		return adSessionDetails;
+	}
+
+	public void setAdSessionDetails(AdSessionDetails adSessionDetails) {
+		this.adSessionDetails = adSessionDetails;
+	}
+
 	public QueryData getQueryData() {
 		return queryData;
 	}

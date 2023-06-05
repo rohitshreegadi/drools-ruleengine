@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.iab.bootdrools.model.AdSessionDetails;
 import com.iab.bootdrools.model.GeometryChangeObject;
 import com.iab.bootdrools.model.GeometryChangeResult;
 import com.iab.bootdrools.model.ImpressionObject;
@@ -100,6 +101,14 @@ public class StartSessionService {
 			SessionStartResult sessionStartresult=	getSessionStartResults(sessionStartObject);
 			Timestamp sessionStartTimestamp = new Timestamp(Long.parseLong(sessionStartObject.getTimestamp()));
 			QueryData queryDatasessionStart=	errormsgMethod(sessionStartObject,sessionStartresult,query);
+			AdSessionDetails adSessionDetails = new AdSessionDetails();
+			adSessionDetails.setAdSessionId(sessionStartObject.getAdSessionId());
+			adSessionDetails.setVersion(sessionStartObject.getApiVersion());
+			adSessionDetails.setAppName(sessionStartObject.getAppId());
+			adSessionDetails.setPlatform(sessionStartObject.getOs());
+			adSessionDetails.setCreativeType(sessionStartObject.getCreativeType());
+			adSessionDetails.setSessionType(sessionStartObject.getAdSessionType());
+			sessionStartresult.setAdSessionDetails(adSessionDetails);
 			sessionStartresult.setQueryData(queryDatasessionStart);
 			sessionStartresult.setEventType(keys);
 			sessionStartresult.setTimestamp(sessionStartTimestamp.toString());
